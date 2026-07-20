@@ -10,3 +10,13 @@ brainjob sync
 ```
 
 Open `brainjob/tracking/dashboard.html` after syncing.
+
+## Skills
+
+Cross-tool skill content lives under:
+
+- `/home/runner/work/jobbrainmine/jobbrainmine/skills/`
+
+GitHub-specific adapters live under:
+
+- `/home/runner/work/jobbrainmine/jobbrainmine/.github/skills/`
