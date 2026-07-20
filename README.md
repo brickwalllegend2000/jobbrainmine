@@ -24,3 +24,13 @@ After enabling Pages (Settings → Pages → Source: GitHub Actions), view it at
 `https://brickwalllegend2000.github.io/jobbrainmine/`
 
 Pull requests run pytest, validation, and `brainjob sync --check`.
+
+## Skills
+
+Cross-tool skill content lives under:
+
+- `skills/`
+
+GitHub-specific adapters live under:
+
+- `.github/skills/`
