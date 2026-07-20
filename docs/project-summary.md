@@ -58,7 +58,12 @@ Archived jobs move to `data/jobs/_archive/<job-id>/` and are excluded from the d
 
 ### Dashboard
 
-After `brainjob sync`, open `brainjob/tracking/dashboard.html` in a browser. The dashboard embeds job data at sync time and provides:
+| Access | Link |
+|--------|------|
+| Live | [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) |
+| Local | `http://localhost:8000/dashboard.html` after `brainjob sync` and `python -m http.server 8000 --directory tracking` |
+
+The dashboard embeds job data at sync time and provides:
 
 - Pipeline stats and status/priority filters
 - Overdue next actions and upcoming deadlines
@@ -106,7 +111,8 @@ brainjob add \
 brainjob validate
 brainjob sync
 
-# Open tracking/dashboard.html in a browser
+# Local: python -m http.server 8000 --directory tracking
+# Live:  https://brickwalllegend2000.github.io/jobbrainmine/
 ```
 
 See `brainjob/data/jobs/example-company-policy-officer/` for a complete sample job bundle.
