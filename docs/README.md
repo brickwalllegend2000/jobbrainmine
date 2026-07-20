@@ -5,7 +5,7 @@ Documentation for the [jobbrainmine](https://github.com/brickwalllegend2000/jobb
 | Document | Description |
 |----------|-------------|
 | [Project summary](./project-summary.md) | What the project does, architecture, and current capabilities |
-| [Work breakdown](./work-breakdown.md) | Work breakdown structure (WBS) for development and maintenance |
+| [Work breakdown](./work-breakdown.md) | Work breakdown structure (WBS), including Plane backlog closure for JOBBRAINMI-1..9 |
 
 ## Quick start
 

@@ -82,6 +82,7 @@ After `brainjob sync`, open `brainjob/tracking/dashboard.html` in a browser. The
 - **Version:** 0.1.0
 - **Status:** Functional MVP with CLI, validation, sync, watch, archive, dashboard, example job, and test coverage across all major modules
 - **History:** Initial commit plus one feature PR implementing the full JSON-only system
+- **Plane backlog:** JOBBRAINMI-1 through JOBBRAINMI-9 map to this MVP and are closed as Done (see [work-breakdown.md](./work-breakdown.md) section 12)
 
 ### Example workflow
 

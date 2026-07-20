@@ -202,3 +202,23 @@ Small, independent tasks suitable for parallel work:
 | Dashboard dark mode | `dashboard.css`, `dashboard.js` | Small |
 | Job URL scraper | new `import.py`, CLI, tests | Large |
 | Restore from archive | `archive.py`, CLI, tests | Medium |
+
+---
+
+## 12. Plane backlog closure (JOBBRAINMI-1..9)
+
+The Plane backlog items **JOBBRAINMI-1** through **JOBBRAINMI-9** describe the Brainjob v0.1.0 MVP. They are **Done** in this repository; no greenfield implementation remains for those issues.
+
+| Plane ID | Issue name | Status | Primary implementation |
+|----------|------------|--------|------------------------|
+| JOBBRAINMI-7 | Repository scaffolding | Done | `brainjob/data/`, `src/brainjob/`, `tests/`, `tracking/` |
+| JOBBRAINMI-4 | Canonical JSON schemas and file contracts | Done | `schemas.py`, templates under `data/templates/job/` |
+| JOBBRAINMI-8 | Add and archive commands | Done | `add.py`, `archive.py`, CLI subcommands |
+| JOBBRAINMI-5 | Validation and integrity checks | Done | `validate.py`, `integrity.py` |
+| JOBBRAINMI-6 | Tracking index and dashboard | Done | `sync.py`, `dashboard.css`, `dashboard.js` |
+| JOBBRAINMI-9 | Sync and sync-check workflows | Done | `sync_workspace` / `brainjob sync [--check]` (index + dashboard generation; `posting_status` / `last_verified` are schema fields, not live HTTP probes) |
+| JOBBRAINMI-2 | Watch mode | Done | `watch.py` |
+| JOBBRAINMI-3 | README and contributor guidance | Done | `brainjob/README.md`, `docs/` |
+| JOBBRAINMI-1 | Comprehensive tests | Done | `brainjob/tests/` (pytest) |
+
+**Out of scope for this closure:** live URL verification of employer postings, formal JSON Schema (`.json`) files, CI/pre-commit/CHANGELOG/ruff (WBS Phase A), and other Planned WBS items in sections 1–8 above.
