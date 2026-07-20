@@ -45,14 +45,18 @@ Pull requests run pytest, validation, and `brainjob sync --check`.
 | [Project summary](docs/project-summary.md) | Architecture and capabilities |
 | [Work breakdown](docs/work-breakdown.md) | WBS and Plane backlog status |
 | [JSON schema reference](docs/json-schema-reference.md) | Data model and formal schemas |
+| [Skill to job workflow](docs/skill-to-job-workflow.md) | Format extracted postings and add jobs |
 | [CHANGELOG](brainjob/CHANGELOG.md) | Version history |
 
 ## Skills
 
-Cross-tool skill content lives under:
+Cross-tool skill content lives under `skills/`:
 
-- `skills/`
+| Skill | Purpose |
+|-------|---------|
+| [`extracted-output-formatter`](skills/extracted-output-formatter/) | Clean and reformat messy extracted text |
+| [`brainjob-add-job`](skills/brainjob-add-job/) | Map posting fields and run `brainjob add` |
 
-GitHub-specific adapters live under:
+GitHub-specific adapters live under `.github/skills/`. Adapters for Copilot, Cursor/generic, Claude, and ChatGPT live under each skill's `adapters/` folder.
 
-- `.github/skills/`
+Workflow guide: [docs/skill-to-job-workflow.md](docs/skill-to-job-workflow.md).
