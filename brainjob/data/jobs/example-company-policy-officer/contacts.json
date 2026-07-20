@@ -1,0 +1,15 @@
+{
+  "job_id": "example-company-policy-officer",
+  "contacts": [
+    {
+      "name": "Jane Smith",
+      "role": "Hiring Manager",
+      "organisation": "Example Company",
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "relationship": "unknown",
+      "notes": null
+    }
+  ]
+}

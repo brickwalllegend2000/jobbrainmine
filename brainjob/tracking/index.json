@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-20T04:59:24+00:00",
+  "stats": {
+    "total_jobs": 1,
+    "by_status": {
+      "preparing": 1
+    },
+    "overdue_actions": 0,
+    "upcoming_deadlines": 1
+  },
+  "jobs": [
+    {
+      "id": "example-company-policy-officer",
+      "role": {
+        "title": "Policy Officer",
+        "company": "Example Company",
+        "department": "European Affairs",
+        "employment_type": "full-time",
+        "seniority": null,
+        "vacancies": 1
+      },
+      "location": {
+        "display": "Brussels, Belgium",
+        "city": "Brussels",
+        "country": "Belgium",
+        "work_arrangement": "hybrid",
+        "remote_restrictions": null,
+        "relocation_available": null
+      },
+      "compensation": {
+        "minimum": null,
+        "maximum": null,
+        "currency": "EUR",
+        "interval": "yearly",
+        "display_original": null,
+        "benefits_original": null
+      },
+      "dates": {
+        "published": null,
+        "deadline": "2026-08-15",
+        "start_date": null,
+        "captured": "2026-07-20T14:30:00+02:00",
+        "last_verified": "2026-07-20T14:30:00+02:00"
+      },
+      "source": {
+        "url": "https://example.com/jobs/policy-officer",
+        "domain": "example.com",
+        "reference": null,
+        "capture_method": "manual",
+        "posting_status": "open"
+      },
+      "classification": {
+        "tags": [
+          "policy",
+          "eu-affairs"
+        ],
+        "priority": "medium"
+      },
+      "description_original": {
+        "format": "plain_text",
+        "content": "The complete job description is pasted here exactly as published.",
+        "language": "en",
+        "captured_at": "2026-07-20T14:30:00+02:00",
+        "sha256": "d64e54f894b3d017c37d80456a6bcd4fb1a5536a7a5cf51447718ae227347bd8"
+      },
+      "integrity": {
+        "valid": true,
+        "sha256": "d64e54f894b3d017c37d80456a6bcd4fb1a5536a7a5cf51447718ae227347bd8",
+        "error": null
+      },
+      "application": {
+        "status": "preparing",
+        "saved_date": "2026-07-20",
+        "applied_date": null,
+        "next_action": {
+          "description": "Prepare cover letter",
+          "due": "2026-07-28",
+          "completed": false
+        },
+        "overdue_action": false,
+        "timeline": [
+          {
+            "timestamp": "2026-07-20T14:30:00+02:00",
+            "type": "saved",
+            "description": "Vacancy added to Brainjob"
+          }
+        ],
+        "interviews": [],
+        "assessments": [],
+        "offer": null,
+        "outcome": null
+      },
+      "contacts": [
+        {
+          "name": "Jane Smith",
+          "role": "Hiring Manager",
+          "organisation": "Example Company",
+          "email": null,
+          "phone": null,
+          "linkedin": null,
+          "relationship": "unknown",
+          "notes": null
+        }
+      ],
+      "notes": [
+        {
+          "id": "note-001",
+          "created_at": "2026-07-20T15:00:00+02:00",
+          "author": "user",
+          "category": "research",
+          "content": "Personal research goes here."
+        }
+      ],
+      "documents": {
+        "items": [
+          {
+            "type": "cv",
+            "path": "documents/cv-policy-officer.pdf",
+            "version": 1,
+            "created_at": "2026-07-25T10:00:00+02:00",
+            "submitted": false
+          }
+        ],
+        "submitted_count": 0,
+        "pending_count": 1
+      },
+      "data_path": "../data/jobs/example-company-policy-officer"
+    }
+  ]
+}

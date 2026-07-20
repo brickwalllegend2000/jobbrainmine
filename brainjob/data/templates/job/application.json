@@ -1,0 +1,24 @@
+{
+  "job_id": "{{JOB_ID}}",
+  "status": "preparing",
+  "saved_date": "{{SAVED_DATE}}",
+  "applied_date": null,
+  "withdrawn_date": null,
+  "decision_date": null,
+  "next_action": {
+    "description": "Prepare cover letter",
+    "due": "{{SAVED_DATE}}",
+    "completed": false
+  },
+  "timeline": [
+    {
+      "timestamp": "{{TIMESTAMP}}",
+      "type": "saved",
+      "description": "Vacancy added to Brainjob"
+    }
+  ],
+  "interviews": [],
+  "assessments": [],
+  "offer": null,
+  "outcome": null
+}

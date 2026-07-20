@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "{{JOB_ID}}",
+  "role": {
+    "title": "{{TITLE}}",
+    "company": "{{COMPANY}}",
+    "department": "{{DEPARTMENT}}",
+    "employment_type": "full-time",
+    "seniority": null,
+    "vacancies": 1
+  },
+  "location": {
+    "display": "{{LOCATION_DISPLAY}}",
+    "city": "{{CITY}}",
+    "country": "{{COUNTRY}}",
+    "work_arrangement": "hybrid",
+    "remote_restrictions": null,
+    "relocation_available": null
+  },
+  "compensation": {
+    "minimum": null,
+    "maximum": null,
+    "currency": "EUR",
+    "interval": "yearly",
+    "display_original": null,
+    "benefits_original": null
+  },
+  "dates": {
+    "published": null,
+    "deadline": "{{DEADLINE}}",
+    "start_date": null,
+    "captured": "{{CAPTURED_AT}}",
+    "last_verified": "{{CAPTURED_AT}}"
+  },
+  "source": {
+    "url": "{{URL}}",
+    "domain": "{{DOMAIN}}",
+    "reference": null,
+    "capture_method": "manual",
+    "posting_status": "open"
+  },
+  "description_original": {
+    "format": "plain_text",
+    "content": "{{DESCRIPTION}}",
+    "language": "en",
+    "captured_at": "{{CAPTURED_AT}}",
+    "sha256": "pending"
+  },
+  "classification": {
+    "tags": [],
+    "priority": "{{PRIORITY}}"
+  }
+}

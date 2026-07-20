@@ -1,0 +1,12 @@
+{
+  "job_id": "example-company-policy-officer",
+  "notes": [
+    {
+      "id": "note-001",
+      "created_at": "2026-07-20T15:00:00+02:00",
+      "author": "user",
+      "category": "research",
+      "content": "Personal research goes here."
+    }
+  ]
+}
