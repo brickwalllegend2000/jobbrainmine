@@ -1,16 +1,127 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-20T22:30:30+00:00",
+  "generated_at": "2026-07-20T23:41:43+00:00",
   "stats": {
-    "total_jobs": 2,
+    "total_jobs": 8,
     "by_status": {
-      "preparing": 1,
-      "saved": 1
+      "saved": 6,
+      "preparing": 2
     },
-    "overdue_actions": 0,
-    "upcoming_deadlines": 1
+    "overdue_actions": 1,
+    "upcoming_deadlines": 4
   },
   "jobs": [
+    {
+      "id": "beuc-food-policy-trainee-6-months-traineeship",
+      "role": {
+        "title": "Food policy Trainee (6 months traineeship)",
+        "company": "BEUC",
+        "department": null,
+        "employment_type": "internship",
+        "seniority": "internship",
+        "vacancies": 1
+      },
+      "location": {
+        "display": "Brussels, Belgium",
+        "city": "Brussels",
+        "country": "Belgium",
+        "work_arrangement": "hybrid",
+        "remote_restrictions": null,
+        "relocation_available": null
+      },
+      "compensation": {
+        "minimum": 1325,
+        "maximum": 1325,
+        "currency": "EUR",
+        "interval": "monthly",
+        "display_original": "€1,325/month (CIP scheme)",
+        "benefits_original": null
+      },
+      "dates": {
+        "published": null,
+        "deadline": "2026-06-26",
+        "start_date": "2026-07-13",
+        "captured": "2026-07-21T01:41:42+02:00",
+        "last_verified": "2026-07-10T00:00:00+02:00"
+      },
+      "source": {
+        "url": "https://www.beuc.eu/vacancy/food-policy-trainee",
+        "domain": "www.beuc.eu",
+        "reference": null,
+        "capture_method": "manual",
+        "posting_status": "closed"
+      },
+      "classification": {
+        "tags": [
+          "policy",
+          "food",
+          "internship",
+          "consumer"
+        ],
+        "priority": "low"
+      },
+      "description_original": {
+        "format": "plain_text",
+        "content": "Food policy Trainee (6 months traineeship)\n\nOrganisation: BEUC – The European Consumer Organisation\nLocation: Brussels, Belgium\nEngagement: Internship (CIP)\nCompensation: €1,325/month (CIP scheme)\nDeadline: 26 June 2026\nWork arrangement: Hybrid\nSource: https://www.beuc.eu/vacancy/food-policy-trainee\n\n## About the role\n\nBEUC – The European Consumer Organisation is looking for a Food policy trainee to support the implementation of BEUC’s strategy on food under the supervision of the team One health – dealing with food, health, and chemicals safety.\n\n## Responsibilities\n\n- Supporting the development of a toolkit for consumer organisations with advocacy materials to advance policy action at national level on plant-based foods.\n- Monitoring and analysing EU developments related to food policy.\n- Mapping relevant stakeholders and supporting engagement with EU institutions and civil society.\n- Gathering and analysing evidence from BEUC members, academic sources, and other relevant materials.\n- Supporting the preparation of meetings and events, including drafting agendas, background notes, and follow-up actions.\n- Taking minutes of internal and external meetings.\n\n## Candidate profile\n\n- University degree in public health, law, political science or a related field.\n- A strong interest in EU food policy and on initiatives that can help promote plant-based foods and diets.\n- Good understanding of EU institutions and decision-making processes.\n- Strong analytical skills and the ability to synthesise complex information.\n- Very good drafting skills in English.\n- Good organisational skills and attention to detail.\n- Proactive attitude and willingness to learn.\n- Previous experience or academic work related to food policy or consumer protection is an asset.\n\n## What BEUC offers\n\n- A 6-month paid traineeship under a Convention d’Immersion Professionnelle (CIP) with a competitive package including:\n  - An allocation of 1,325€ per month.\n  - Fringe benefits: Homeworking allowance, public transport, 12 days extra-legal paid leave.\n  - Flexitime, homeworking possibility (up to 3 days per week), work-life balance.\n- A welcoming onboarding.\n- A workplace committed to support staff growth and well-being.\n- A multidisciplinary and multicultural working environment within an organisation dedicated to promoting consumer interests.\n\n## Location and working arrangements\n\nAs the contract is subject to Belgian law, candidates must be committed to official registration in Belgium and working from BEUC’s Brussels office. Teleworking from home or abroad is possible, subject to the remote-working policy and organisational needs.\n\n## Application process\n\nApplications should be sent by 26 June 2026 by e-mail to apply@beuc.eu with the subject line: Food policy Trainee.\n\nInclude:\n1. A curriculum vitae, with no photo\n2. A motivation letter, maximum one page\n\nEntry into function expected as of 13 July 2026. Interviews as of 1 July 2026 with Head of Human Resources and Head of One Health.\n\nBEUC is an equal opportunities employer.\n",
+        "language": "en",
+        "captured_at": "2026-07-21T01:41:42+02:00",
+        "sha256": "f0eff090c374accd91e750505da1d5858ac7ae22948b7cfe34676131744285cc"
+      },
+      "integrity": {
+        "valid": true,
+        "sha256": "f0eff090c374accd91e750505da1d5858ac7ae22948b7cfe34676131744285cc",
+        "error": null
+      },
+      "application": {
+        "status": "saved",
+        "saved_date": "2026-07-21",
+        "applied_date": null,
+        "next_action": {
+          "description": "Deadline passed (26 Jun 2026); keep for reference / watch future BEUC traineeships",
+          "due": "2026-07-10",
+          "completed": true
+        },
+        "overdue_action": false,
+        "timeline": [
+          {
+            "timestamp": "2026-07-21T01:41:42+02:00",
+            "type": "saved",
+            "description": "Vacancy added to Brainjob"
+          }
+        ],
+        "interviews": [],
+        "assessments": [],
+        "offer": null,
+        "outcome": null
+      },
+      "contacts": [
+        {
+          "name": "BEUC Applications",
+          "role": "Recruitment",
+          "organisation": "BEUC",
+          "email": "apply@beuc.eu",
+          "phone": null,
+          "linkedin": null,
+          "relationship": "unknown",
+          "notes": "Subject line: Food policy Trainee"
+        }
+      ],
+      "notes": [
+        {
+          "id": "note-1",
+          "author": "ai",
+          "category": "follow-up",
+          "content": "Imported from upload. Application stage marked Reference; deadline passed. Kept for reference.",
+          "created_at": "2026-07-21T01:41:42+02:00"
+        }
+      ],
+      "documents": {
+        "items": [],
+        "submitted_count": 0,
+        "pending_count": 0
+      },
+      "data_path": "../data/jobs/beuc-food-policy-trainee-6-months-traineeship"
+    },
     {
       "id": "example-company-policy-officer",
       "role": {
@@ -127,6 +238,106 @@
         "pending_count": 1
       },
       "data_path": "../data/jobs/example-company-policy-officer"
+    },
+    {
+      "id": "giz-junior-advisor-for-the-global-gateway-investment-climate-reform-facility",
+      "role": {
+        "title": "Junior Advisor for the Global Gateway Investment Climate Reform Facility",
+        "company": "GIZ",
+        "department": null,
+        "employment_type": "fixed-term",
+        "seniority": "junior",
+        "vacancies": 1
+      },
+      "location": {
+        "display": "Brussels, Belgium",
+        "city": "Brussels",
+        "country": "Belgium",
+        "work_arrangement": "hybrid",
+        "remote_restrictions": null,
+        "relocation_available": null
+      },
+      "compensation": {
+        "minimum": null,
+        "maximum": null,
+        "currency": "EUR",
+        "interval": "yearly",
+        "display_original": "Remunerated according to experience (GIZ Brussels PC200)",
+        "benefits_original": null
+      },
+      "dates": {
+        "published": null,
+        "deadline": null,
+        "start_date": null,
+        "captured": "2026-07-21T01:41:42+02:00",
+        "last_verified": "2026-07-21T01:41:42+02:00"
+      },
+      "source": {
+        "url": "https://jobs.euractiv.com/jobs/junior-advisor-m-f-d-for-the-global-gateway-investment-climate-reform-gg-icr-facility/",
+        "domain": "jobs.euractiv.com",
+        "reference": "Euractiv Jobs posting",
+        "capture_method": "manual",
+        "posting_status": "open"
+      },
+      "classification": {
+        "tags": [
+          "economics",
+          "development",
+          "global-gateway",
+          "investment-climate"
+        ],
+        "priority": "medium"
+      },
+      "description_original": {
+        "format": "plain_text",
+        "content": "Junior Advisor (m/f/d) for the Global Gateway Investment Climate Reform (GG ICR) Facility\n\nOrganisation: GIZ (implemented with Expertise France and SNV; posted via Euractiv Jobs)\nLocation: Brussels, Belgium\nEngagement: Temporary contract (PC200 Belgian law)\nWork arrangement: Hybrid\nSource: https://jobs.euractiv.com/jobs/junior-advisor-m-f-d-for-the-global-gateway-investment-climate-reform-gg-icr-facility/\n\n## About the programme\n\nThe Global Gateway Investment Climate Reform (ICR) Facility supports partner governments, public institutions and private-sector representatives in improving the business environment and investment climate in line with the EU’s Global Gateway strategy. Jointly co-funded by the European Union, the German Federal Ministry for Economic Cooperation and Development (BMZ), and the French Ministry for Europe and Foreign Affairs (MEAE), the Facility is implemented by GIZ, Expertise France and SNV.\n\nThe Facility provides high-quality technical assistance, develops and disseminates knowledge products, strengthens strategic dialogue with EU institutions and contributes to evidence-based policy processes. A central component is the ICR Knowledge Hub, which consolidates lessons learned, maintains methodological standards, and ensures cross-regional learning aligned with Global Gateway priorities.\n\n## Tasks\n\nReinforcing the Brussels-based team, the Junior Advisor for the GG ICR Facility works closely with all team members, most particularly with GIZ staff but also with partner organisations across INTPA partner countries to:\n\n- Support the implementation of the outreach strategies for the GG ICR Facility\n- Support the management of technical assistance interventions in support of GG ICR partner organisations (governments, public agencies, chambers, associations etc), with a focus on business environment reform, including for each intervention:\n  - Assessing the request for support from partner organisations, through interviews with requesters and other relevant actors\n  - Draft Terms of Reference for the proposed intervention\n  - Select and manage consultants to implement the intervention\n  - Organise and hold regular exchanges with the requesters and consultants to ensure sound implementation\n  - Liaise with the EU Delegations and other donors in the respective countries\n  - Ensure collection of required data for monitoring and evaluating impact\n  - Ensure adherence to communication and visibility rules by all actors, in particular consultants\n- Contribute to GG ICR Facility knowledge management through studies, training, peer-events, especially in business environment reforms and women's economic empowerment\n- Support Monitoring and Evaluation (M&E) efforts, including baseline/endline data and donor reporting (EU and BMZ)\n\n## Requirements\n\n- Master’s degree or equivalent in economics, political science, public policy, international development, business administration, law, or another relevant field\n- First relevant professional experience in international development cooperation, preferably private sector development, investment climate reform, business environment reform, public-private dialogue, women’s economic empowerment, trade, or economic governance\n- First professional experience working with stakeholders of developing countries; first experience managing technical assistance interventions\n- Strong conceptual and analytical skills\n- Understanding of EU development cooperation, Global Gateway, EU Delegations, and Team Europe\n- Excellent English; French and/or Spanish strong assets; Portuguese an advantage\n- High intercultural competence, political sensitivity, flexibility\n- Willingness to travel to INTPA partner countries and within Europe\n\n## Offer\n\nTemporary contract with GIZ in Brussels under Belgian law (PC200). Remunerated according to experience. Legal holidays plus 5 extra days, lunch checks, hospitalisation insurance, public transport ticket reimbursement, home office per policy.\n\nOnly applications for candidates eligible to work in Belgium will be accepted. Apply via the Euractiv Jobs posting Apply button.\n",
+        "language": "en",
+        "captured_at": "2026-07-21T01:41:42+02:00",
+        "sha256": "8c832ba33cc6da62a11b7f7ec9b077f99070ecf719df422f1acdcd7ae3759d8a"
+      },
+      "integrity": {
+        "valid": true,
+        "sha256": "8c832ba33cc6da62a11b7f7ec9b077f99070ecf719df422f1acdcd7ae3759d8a",
+        "error": null
+      },
+      "application": {
+        "status": "saved",
+        "saved_date": "2026-07-21",
+        "applied_date": null,
+        "next_action": {
+          "description": "Review GG ICR fit and decide whether to apply via Euractiv",
+          "due": "2026-07-27",
+          "completed": false
+        },
+        "overdue_action": false,
+        "timeline": [
+          {
+            "timestamp": "2026-07-21T01:41:42+02:00",
+            "type": "saved",
+            "description": "Vacancy added to Brainjob"
+          }
+        ],
+        "interviews": [],
+        "assessments": [],
+        "offer": null,
+        "outcome": null
+      },
+      "contacts": [],
+      "notes": [
+        {
+          "id": "note-1",
+          "author": "ai",
+          "category": "research",
+          "content": "Facility implemented by GIZ, Expertise France, and SNV. Posted on Euractiv Jobs; apply through that portal. No explicit deadline in source text.",
+          "created_at": "2026-07-21T01:41:42+02:00"
+        }
+      ],
+      "documents": {
+        "items": [],
+        "submitted_count": 0,
+        "pending_count": 0
+      },
+      "data_path": "../data/jobs/giz-junior-advisor-for-the-global-gateway-investment-climate-reform-facility"
     },
     {
       "id": "green-european-foundation-policy-consultant-on-green-transition",
@@ -246,6 +457,449 @@
         "pending_count": 1
       },
       "data_path": "../data/jobs/green-european-foundation-policy-consultant-on-green-transition"
+    },
+    {
+      "id": "icmpd-team-assistant",
+      "role": {
+        "title": "Team Assistant",
+        "company": "ICMPD",
+        "department": null,
+        "employment_type": "fixed-term",
+        "seniority": "assistant",
+        "vacancies": 1
+      },
+      "location": {
+        "display": "Brussels, Belgium",
+        "city": "Brussels",
+        "country": "Belgium",
+        "work_arrangement": "on-site",
+        "remote_restrictions": null,
+        "relocation_available": null
+      },
+      "compensation": {
+        "minimum": 2662,
+        "maximum": 2662,
+        "currency": "EUR",
+        "interval": "monthly",
+        "display_original": "Monthly net-base salary: €2,662.00",
+        "benefits_original": null
+      },
+      "dates": {
+        "published": null,
+        "deadline": "2026-07-27",
+        "start_date": null,
+        "captured": "2026-07-21T01:41:42+02:00",
+        "last_verified": "2026-07-10T00:00:00+02:00"
+      },
+      "source": {
+        "url": "https://careers.icmpd.org/Home/JobOpeningDetails?jobOpeningId=1187",
+        "domain": "careers.icmpd.org",
+        "reference": "Generic Job Description Team Assistant (S1 LS1).pdf",
+        "capture_method": "manual",
+        "posting_status": "open"
+      },
+      "classification": {
+        "tags": [
+          "administration",
+          "migration",
+          "assistant"
+        ],
+        "priority": "medium"
+      },
+      "description_original": {
+        "format": "plain_text",
+        "content": "Team Assistant\n\nOrganisation: ICMPD\nLocation: Brussels, Belgium\nEngagement: Fixed-term\nCompensation: Monthly net-base salary: €2,662.00\nDeadline: 27 July 2026\nWork arrangement: On-site\nSource: https://careers.icmpd.org/Home/JobOpeningDetails?jobOpeningId=1187\nSource documents: Generic Job Description Team Assistant (S1 LS1).pdf\n\n## Overview\n\nThis is a joint recruitment covering two Team Assistant positions across two ICMPD Global Initiatives: the European Union Migration and Displacement Capacity Assistance Project (EU-MIDCAP) and the Return and Reintegration Facility (RRF). Each Team Assistant will be assigned to one of the two initiatives.\n\n## Role\n\nThe Team Assistant is responsible for providing smooth, efficient, and reliable administrative support to managers and project staff for project-related activities. Reporting to the respective Project Manager, they work closely with project team members and provide guidance to new staff and personnel on ICMPD’s regulatory framework, standard administrative practices, and operating procedures.\n\n## Language requirements\n\n- Required: Proficiency in spoken and written English\n- Assets: Proficiency in French and Spanish\n\n## Project assignments\n\n### EU-MIDCAP\n\nThe European Union Migration and Displacement Capacity Assistance Project (EU-MIDCAP) is an EU-funded, DG INTPA-supported, consortium-led peer-to-peer facility. It supports partner-country authorities, civil society organisations, and regional bodies in strengthening migration and forced-displacement management systems and cooperation with the EU and its Member States.\n\nThe Team Assistant will provide cross-cutting support to the project and several Technical Assistance Actions, including in French- and Spanish-speaking countries, and will report to one of the Project Managers.\n\n### Return and Reintegration Facility (RRF)\n\nThe Return and Reintegration Facility (RRF) is an EU-funded programme supported by DG HOME. Established in 2022, it helps EU Member States strengthen the effectiveness, coordination, and sustainability of their return and reintegration systems. More information is available at https://www.reintegrationfacility.eu/.\n\nThe Team Assistant will join the RRF Facility Support and Knowledge Team, providing horizontal administrative support across the RRF’s four sub-teams, comprising around 25 team members in total, and will report to one of the Project Managers.\n\n## Generic profile (S1/LS1) summary\n\nThe Team Assistant provides administrative support including correspondence, reports, databases, expert recruitment/procurement support, travel organisation, contract monitoring, and events/meetings logistics. Requires bachelor's degree or equivalent (or high-school plus two additional years), at least two years relevant experience, events experience, strong English; SAP an asset. Classified S1/LS1.\n",
+        "language": "en",
+        "captured_at": "2026-07-21T01:41:42+02:00",
+        "sha256": "16c990ce87bad5f069b1d9e3dd63235ea3792592f1a0cf1942b3e1c908fee283"
+      },
+      "integrity": {
+        "valid": true,
+        "sha256": "16c990ce87bad5f069b1d9e3dd63235ea3792592f1a0cf1942b3e1c908fee283",
+        "error": null
+      },
+      "application": {
+        "status": "saved",
+        "saved_date": "2026-07-21",
+        "applied_date": null,
+        "next_action": {
+          "description": "Decide EU-MIDCAP vs RRF assignment fit; confirm admin/coordination experience before drafting application",
+          "due": "2026-07-20",
+          "completed": false
+        },
+        "overdue_action": false,
+        "timeline": [
+          {
+            "timestamp": "2026-07-21T01:41:42+02:00",
+            "type": "saved",
+            "description": "Vacancy added to Brainjob"
+          }
+        ],
+        "interviews": [],
+        "assessments": [],
+        "offer": null,
+        "outcome": null
+      },
+      "contacts": [],
+      "notes": [
+        {
+          "id": "note-1",
+          "author": "ai",
+          "category": "strategy",
+          "content": "Joint recruitment for EU-MIDCAP and RRF Team Assistant roles. Generic S1/LS1 profile PDF attached as source document (not a separate vacancy).",
+          "created_at": "2026-07-21T01:41:42+02:00"
+        }
+      ],
+      "documents": {
+        "items": [
+          {
+            "type": "other",
+            "path": "Generic Job Description Team Assistant (S1 LS1).pdf",
+            "version": 1,
+            "created_at": "2026-07-21T01:41:42+02:00",
+            "submitted": false
+          }
+        ],
+        "submitted_count": 0,
+        "pending_count": 1
+      },
+      "data_path": "../data/jobs/icmpd-team-assistant"
+    },
+    {
+      "id": "plan-international-climate-economic-empowerment-lead",
+      "role": {
+        "title": "Climate & Economic Empowerment Lead",
+        "company": "Plan International",
+        "department": null,
+        "employment_type": "full-time",
+        "seniority": "lead",
+        "vacancies": 1
+      },
+      "location": {
+        "display": "Globally flexible; Asia-Pacific preferred; Belgium eligible",
+        "city": null,
+        "country": "Belgium",
+        "work_arrangement": "remote",
+        "remote_restrictions": null,
+        "relocation_available": null
+      },
+      "compensation": {
+        "minimum": null,
+        "maximum": null,
+        "currency": "EUR",
+        "interval": "yearly",
+        "display_original": null,
+        "benefits_original": null
+      },
+      "dates": {
+        "published": null,
+        "deadline": "2026-07-12",
+        "start_date": null,
+        "captured": "2026-07-21T01:41:42+02:00",
+        "last_verified": "2026-07-10T00:00:00+02:00"
+      },
+      "source": {
+        "url": "https://jobs.plan-international.org/",
+        "domain": "jobs.plan-international.org",
+        "reference": "Climate & Economic Empowerment Lead Job Details | Plan International.pdf; Career Opportunities: Apply for Climate & Economic Empowerment Lead (54094).pdf",
+        "capture_method": "manual",
+        "posting_status": "closed"
+      },
+      "classification": {
+        "tags": [
+          "climate",
+          "economic-empowerment",
+          "policy",
+          "gender"
+        ],
+        "priority": "high"
+      },
+      "description_original": {
+        "format": "plain_text",
+        "content": "Climate & Economic Empowerment Lead\n\nOrganisation: Plan International\nLocation: Globally flexible; Asia-Pacific preferred; Belgium eligible\nEngagement: Permanent (or maximum fixed-term under employing office terms)\nDeadline: 12 July 2026\nWork arrangement: Remote/Flexible\nSources: Climate & Economic Empowerment Lead Job Details | Plan International.pdf; Career Opportunities: Apply for Climate & Economic Empowerment Lead (54094).pdf\n\n## Role purpose\n\nLead Plan International's global Climate & Economic Empowerment agenda, advancing climate justice and resilient livelihoods for girls, young people, and marginalised communities. The role connects climate change, gender equality, youth economic empowerment, evidence, advocacy, programming, and resource mobilisation.\n\n## Responsibilities\n\n- Set the global vision, ambition, standards, and value proposition.\n- Build a strategic narrative grounded in climate resilience, community livelihoods, youth economic empowerment, and intersectional gender-transformative approaches.\n- Strengthen donor positioning, partnerships, resource mobilisation, and climate-finance opportunities.\n- Provide technical and thought leadership in climate and livelihoods.\n- Represent Plan International externally and influence sector dialogue.\n- Connect climate resilience with livelihoods, education, protection, and youth opportunity.\n- Translate research and field learning into advocacy, programme design, strategy, and funding narratives.\n- Align global, regional, and country teams and promote learning and innovation.\n\n## Candidate profile\n\n- Strong climate, resilience, and economic empowerment expertise.\n- Experience in resource-constrained, fragile, or climate-affected contexts.\n- Strong understanding of gender-transformative and youth-led approaches.\n- Experience with climate funding mechanisms, partnerships, or global donors.\n- Evidence-to-strategy, advocacy, and funding experience.\n- External representation, influencing, and partnership development.\n- Leadership through influence in a complex global matrix.\n- Excellent communication, facilitation, and strategic thinking.\n\n## Contract and eligibility\n\nPermanent full-time or maximum fixed-term contract under the employing office's terms. The applicant must already have the right to live and work in an eligible country where Plan International can employ for the Global Hub. The preferred location is an Asia-Pacific office; Belgium is among the eligible locations.\n\n## Role-specific application questions\n\n1. Describe experience engaging multilateral or global climate funding mechanisms such as the Green Climate Fund or Adaptation Fund (max 400 characters). Explain your role in securing or influencing access and how programming remained gender-transformative and community-driven.\n2. Give an example of translating complex climate and livelihoods evidence into a strategic narrative (max 400 characters). Identify the evidence, audience—from community practitioners to global donors—and outcome.\n\n## Safeguarding and inclusion\n\nPlan International operates equal-opportunity, safeguarding, pre-employment screening, and Inter-Agency Misconduct Disclosure processes. Reasonable adjustments: careers@plan-international.org.\n",
+        "language": "en",
+        "captured_at": "2026-07-21T01:41:42+02:00",
+        "sha256": "39cba17b68ca4ac47522e6ead334e66af8925478c64d4384c5876e78d6f987ee"
+      },
+      "integrity": {
+        "valid": true,
+        "sha256": "39cba17b68ca4ac47522e6ead334e66af8925478c64d4384c5876e78d6f987ee",
+        "error": null
+      },
+      "application": {
+        "status": "preparing",
+        "saved_date": "2026-07-21",
+        "applied_date": null,
+        "next_action": {
+          "description": "Finalise tailored CV/cover letter, verify 400-character responses, complete portal fields and submit",
+          "due": "2026-07-11",
+          "completed": false
+        },
+        "overdue_action": true,
+        "timeline": [
+          {
+            "timestamp": "2026-07-21T01:41:42+02:00",
+            "type": "saved",
+            "description": "Vacancy added to Brainjob"
+          }
+        ],
+        "interviews": [],
+        "assessments": [],
+        "offer": null,
+        "outcome": null
+      },
+      "contacts": [
+        {
+          "name": "Plan International Careers",
+          "role": "Reasonable adjustments / careers",
+          "organisation": "Plan International",
+          "email": "careers@plan-international.org",
+          "phone": null,
+          "linkedin": null,
+          "relationship": "unknown",
+          "notes": null
+        }
+      ],
+      "notes": [
+        {
+          "id": "note-1",
+          "author": "ai",
+          "category": "strategy",
+          "content": "No direct posting URL in upload; used jobs.plan-international.org as organisation careers URL. Deadline 12 Jul 2026 marked closed relative to capture. Personal application copy-bank content left out of description_original.",
+          "created_at": "2026-07-21T01:41:42+02:00"
+        }
+      ],
+      "documents": {
+        "items": [
+          {
+            "type": "other",
+            "path": "Climate & Economic Empowerment Lead Job Details | Plan International.pdf",
+            "version": 1,
+            "created_at": "2026-07-21T01:41:42+02:00",
+            "submitted": false
+          },
+          {
+            "type": "other",
+            "path": "Career Opportunities: Apply for Climate & Economic Empowerment Lead (54094).pdf",
+            "version": 1,
+            "created_at": "2026-07-21T01:41:42+02:00",
+            "submitted": false
+          }
+        ],
+        "submitted_count": 0,
+        "pending_count": 2
+      },
+      "data_path": "../data/jobs/plan-international-climate-economic-empowerment-lead"
+    },
+    {
+      "id": "polis-network-communications-intern",
+      "role": {
+        "title": "Communications Intern",
+        "company": "POLIS Network",
+        "department": null,
+        "employment_type": "internship",
+        "seniority": "internship",
+        "vacancies": 1
+      },
+      "location": {
+        "display": "Brussels, Belgium",
+        "city": "Brussels",
+        "country": "Belgium",
+        "work_arrangement": "hybrid",
+        "remote_restrictions": null,
+        "relocation_available": null
+      },
+      "compensation": {
+        "minimum": 1095,
+        "maximum": 1095,
+        "currency": "EUR",
+        "interval": "monthly",
+        "display_original": "€1,095/month under the Belgian CIP scheme",
+        "benefits_original": null
+      },
+      "dates": {
+        "published": null,
+        "deadline": "2026-07-24",
+        "start_date": "2026-09-28",
+        "captured": "2026-07-21T01:41:42+02:00",
+        "last_verified": "2026-07-10T00:00:00+02:00"
+      },
+      "source": {
+        "url": "https://www.polisnetwork.eu/job/communications-intern/",
+        "domain": "www.polisnetwork.eu",
+        "reference": "POLIS is hiring a Communications Intern - POLIS Network.pdf",
+        "capture_method": "manual",
+        "posting_status": "open"
+      },
+      "classification": {
+        "tags": [
+          "communications",
+          "mobility",
+          "internship"
+        ],
+        "priority": "medium"
+      },
+      "description_original": {
+        "format": "plain_text",
+        "content": "Communications Intern\n\nOrganisation: POLIS Network\nLocation: Brussels, Belgium\nEngagement: Internship\nCompensation: €1,095/month under the Belgian CIP scheme\nDeadline: 24 July 2026\nStart date: 28 September 2026\nWork arrangement: Hybrid\nSource: https://www.polisnetwork.eu/job/communications-intern/\nSource documents: POLIS is hiring a Communications Intern - POLIS Network.pdf\n\n## Overview\n\nSix-month communications internship supporting the visibility of POLIS and its network of European cities and regions working on sustainable urban mobility.\n\n## Responsibilities\n\n- Manage POLIS social profiles, social calendar, and analytics across LinkedIn, Bluesky, and Instagram.\n- Draft website and Members' Area content.\n- Support digital and print publications, including Cities in Motion.\n- Produce short videos and visual assets.\n- Support projects, working groups, and online and in-person events.\n- Take notes and prepare communications reporting.\n- Prepare and edit Annual POLIS Conference materials.\n- Help print, organise, and display venue signage and handle conference tasks.\n\n## Candidate profile\n\n- Completed degree, preferably in communications, journalism, transport, urban planning, or a related field.\n- Initial communications, journalism, or public-relations experience.\n- Online content and social-media writing skills.\n- Website content management; WordPress is an asset.\n- Social management experience; LinkedIn, Bluesky, and Instagram are assets.\n- Visual judgement and graphic-design skills; Canva is an asset.\n- Interest in urban mobility.\n- Excellent written and spoken English; additional European languages are assets.\n- Existing legal right to work in Belgium; visa sponsorship is unavailable.\n\n## Offer\n\nFull-time internship from 28 September 2026 for six months. Primarily office-based in Brussels with hybrid work available within Belgium and limited Christmas-period remote work.\n\n## Application\n\nEmail a motivation letter and CV to Karen Vancluysen at polis@polisnetwork.eu by 24 July 2026. Subject: Your name and surname - POLIS Comms Intern.\n\nShortlisted candidates will be notified in August, with interviews planned for the first and second weeks of September.\n",
+        "language": "en",
+        "captured_at": "2026-07-21T01:41:42+02:00",
+        "sha256": "4b685177898fe999676cfc4bae423788ba8f407895539600fc846803fda35e5c"
+      },
+      "integrity": {
+        "valid": true,
+        "sha256": "4b685177898fe999676cfc4bae423788ba8f407895539600fc846803fda35e5c",
+        "error": null
+      },
+      "application": {
+        "status": "saved",
+        "saved_date": "2026-07-21",
+        "applied_date": null,
+        "next_action": {
+          "description": "Draft motivation letter and CV for POLIS Comms Intern",
+          "due": "2026-07-22",
+          "completed": false
+        },
+        "overdue_action": false,
+        "timeline": [
+          {
+            "timestamp": "2026-07-21T01:41:42+02:00",
+            "type": "saved",
+            "description": "Vacancy added to Brainjob"
+          }
+        ],
+        "interviews": [],
+        "assessments": [],
+        "offer": null,
+        "outcome": null
+      },
+      "contacts": [
+        {
+          "name": "Karen Vancluysen",
+          "role": "Application contact",
+          "organisation": "POLIS Network",
+          "email": "polis@polisnetwork.eu",
+          "phone": null,
+          "linkedin": null,
+          "relationship": "unknown",
+          "notes": "Subject: Your name and surname - POLIS Comms Intern"
+        }
+      ],
+      "notes": [],
+      "documents": {
+        "items": [
+          {
+            "type": "other",
+            "path": "POLIS is hiring a Communications Intern - POLIS Network.pdf",
+            "version": 1,
+            "created_at": "2026-07-21T01:41:42+02:00",
+            "submitted": false
+          }
+        ],
+        "submitted_count": 0,
+        "pending_count": 1
+      },
+      "data_path": "../data/jobs/polis-network-communications-intern"
+    },
+    {
+      "id": "transport-environment-communications-officer",
+      "role": {
+        "title": "Communications Officer",
+        "company": "Transport & Environment",
+        "department": null,
+        "employment_type": "full-time",
+        "seniority": "officer",
+        "vacancies": 1
+      },
+      "location": {
+        "display": "Brussels (Ixelles), Belgium",
+        "city": "Brussels",
+        "country": "Belgium",
+        "work_arrangement": "hybrid",
+        "remote_restrictions": null,
+        "relocation_available": null
+      },
+      "compensation": {
+        "minimum": null,
+        "maximum": null,
+        "currency": "EUR",
+        "interval": "yearly",
+        "display_original": "Competitive salary based on experience, extensive benefits",
+        "benefits_original": null
+      },
+      "dates": {
+        "published": null,
+        "deadline": "2026-07-24",
+        "start_date": null,
+        "captured": "2026-07-21T01:41:42+02:00",
+        "last_verified": "2026-07-10T00:00:00+02:00"
+      },
+      "source": {
+        "url": "https://jobs.transportenvironment.org/o/communications-officer-1",
+        "domain": "jobs.transportenvironment.org",
+        "reference": "Transport & Environment - Communications Officer.pdf",
+        "capture_method": "manual",
+        "posting_status": "open"
+      },
+      "classification": {
+        "tags": [
+          "climate",
+          "communications",
+          "energy",
+          "mobility"
+        ],
+        "priority": "medium"
+      },
+      "description_original": {
+        "format": "plain_text",
+        "content": "Communications Officer\n\nOrganisation: Transport & Environment (T&E)\nLocation: Brussels (Ixelles), Belgium\nEngagement: Permanent\nCompensation: Competitive salary based on experience, extensive benefits\nDeadline: 24 July 2026\nWork arrangement: Hybrid\nSource: https://jobs.transportenvironment.org/o/communications-officer-1\nSource documents: Transport & Environment - Communications Officer.pdf\n\n## About the role\n\nA media and creative communications role for someone who can plan campaigns, build narratives from data and research, and identify opportunities to elevate policy communications on transport decarbonisation and the energy transition.\n\n## Responsibilities\n\n- Manage relationships with EU affairs media, newswires, and correspondents.\n- Pitch stories and interviews and draft press releases, op-eds, and other media materials.\n- Develop creative campaign, communications, outreach, and engagement ideas for decision-makers.\n- Collaborate with policy teams on research ideas, story angles, and media narratives.\n- Monitor media and policy discussions and act on emerging opportunities.\n- Manage agencies and organise events, briefings, and webinars with researchers, experts, NGOs, and other stakeholders.\n- Identify and deliver video and visual communications opportunities.\n\n## Ideal skills and experience\n\n- Strategic contribution to advocacy, campaigning, communications, and policy goals.\n- Relevant experience, ideally in transport, environmental, or energy communications.\n- Strong internal and external stakeholder relationships, including remote teams.\n- Project planning, implementation, campaigning tools, digital tools, video, advertising, and other creative assets.\n- Entrepreneurial judgement and willingness to test new approaches.\n\n## Practicalities\n\nPermanent, full-time and based in Brussels, with at least two office days per week. Occasional travel to major EU capitals. Flexible working, including some home working, is available.\n",
+        "language": "en",
+        "captured_at": "2026-07-21T01:41:42+02:00",
+        "sha256": "807d2d694898573161cd58c46753751627ed63ec07fc014cea263da0d4d8f684"
+      },
+      "integrity": {
+        "valid": true,
+        "sha256": "807d2d694898573161cd58c46753751627ed63ec07fc014cea263da0d4d8f684",
+        "error": null
+      },
+      "application": {
+        "status": "saved",
+        "saved_date": "2026-07-21",
+        "applied_date": null,
+        "next_action": {
+          "description": "Review T&E Communications Officer fit and prepare application materials",
+          "due": "2026-07-22",
+          "completed": false
+        },
+        "overdue_action": false,
+        "timeline": [
+          {
+            "timestamp": "2026-07-21T01:41:42+02:00",
+            "type": "saved",
+            "description": "Vacancy added to Brainjob"
+          }
+        ],
+        "interviews": [],
+        "assessments": [],
+        "offer": null,
+        "outcome": null
+      },
+      "contacts": [],
+      "notes": [],
+      "documents": {
+        "items": [
+          {
+            "type": "other",
+            "path": "Transport & Environment - Communications Officer.pdf",
+            "version": 1,
+            "created_at": "2026-07-21T01:41:42+02:00",
+            "submitted": false
+          }
+        ],
+        "submitted_count": 0,
+        "pending_count": 1
+      },
+      "data_path": "../data/jobs/transport-environment-communications-officer"
     }
   ]
 }

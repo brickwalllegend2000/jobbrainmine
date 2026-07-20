@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "polis-network-communications-intern",
+  "role": {
+    "title": "Communications Intern",
+    "company": "POLIS Network",
+    "department": null,
+    "employment_type": "internship",
+    "seniority": "internship",
+    "vacancies": 1
+  },
+  "location": {
+    "display": "Brussels, Belgium",
+    "city": "Brussels",
+    "country": "Belgium",
+    "work_arrangement": "hybrid",
+    "remote_restrictions": null,
+    "relocation_available": null
+  },
+  "compensation": {
+    "minimum": 1095,
+    "maximum": 1095,
+    "currency": "EUR",
+    "interval": "monthly",
+    "display_original": "€1,095/month under the Belgian CIP scheme",
+    "benefits_original": null
+  },
+  "dates": {
+    "published": null,
+    "deadline": "2026-07-24",
+    "start_date": "2026-09-28",
+    "captured": "2026-07-21T01:41:42+02:00",
+    "last_verified": "2026-07-10T00:00:00+02:00"
+  },
+  "source": {
+    "url": "https://www.polisnetwork.eu/job/communications-intern/",
+    "domain": "www.polisnetwork.eu",
+    "reference": "POLIS is hiring a Communications Intern - POLIS Network.pdf",
+    "capture_method": "manual",
+    "posting_status": "open"
+  },
+  "description_original": {
+    "format": "plain_text",
+    "content": "Communications Intern\n\nOrganisation: POLIS Network\nLocation: Brussels, Belgium\nEngagement: Internship\nCompensation: €1,095/month under the Belgian CIP scheme\nDeadline: 24 July 2026\nStart date: 28 September 2026\nWork arrangement: Hybrid\nSource: https://www.polisnetwork.eu/job/communications-intern/\nSource documents: POLIS is hiring a Communications Intern - POLIS Network.pdf\n\n## Overview\n\nSix-month communications internship supporting the visibility of POLIS and its network of European cities and regions working on sustainable urban mobility.\n\n## Responsibilities\n\n- Manage POLIS social profiles, social calendar, and analytics across LinkedIn, Bluesky, and Instagram.\n- Draft website and Members' Area content.\n- Support digital and print publications, including Cities in Motion.\n- Produce short videos and visual assets.\n- Support projects, working groups, and online and in-person events.\n- Take notes and prepare communications reporting.\n- Prepare and edit Annual POLIS Conference materials.\n- Help print, organise, and display venue signage and handle conference tasks.\n\n## Candidate profile\n\n- Completed degree, preferably in communications, journalism, transport, urban planning, or a related field.\n- Initial communications, journalism, or public-relations experience.\n- Online content and social-media writing skills.\n- Website content management; WordPress is an asset.\n- Social management experience; LinkedIn, Bluesky, and Instagram are assets.\n- Visual judgement and graphic-design skills; Canva is an asset.\n- Interest in urban mobility.\n- Excellent written and spoken English; additional European languages are assets.\n- Existing legal right to work in Belgium; visa sponsorship is unavailable.\n\n## Offer\n\nFull-time internship from 28 September 2026 for six months. Primarily office-based in Brussels with hybrid work available within Belgium and limited Christmas-period remote work.\n\n## Application\n\nEmail a motivation letter and CV to Karen Vancluysen at polis@polisnetwork.eu by 24 July 2026. Subject: Your name and surname - POLIS Comms Intern.\n\nShortlisted candidates will be notified in August, with interviews planned for the first and second weeks of September.\n",
+    "language": "en",
+    "captured_at": "2026-07-21T01:41:42+02:00",
+    "sha256": "4b685177898fe999676cfc4bae423788ba8f407895539600fc846803fda35e5c"
+  },
+  "classification": {
+    "tags": [
+      "communications",
+      "mobility",
+      "internship"
+    ],
+    "priority": "medium"
+  }
+}

@@ -152,9 +152,18 @@ Data is embedded at sync time from authoritative JSON under `data/jobs/`.
 3. Personal and AI-generated text belongs in `notes.json` (AI notes use `"author": "ai"`).
 4. `tracking/index.json` is generated; never treat it as the source of truth.
 
-## Example job
+## Sample jobs
 
-See `data/jobs/example-company-policy-officer/` for a complete sample bundle matching the project specification.
+| Directory | Notes |
+|-----------|-------|
+| `data/jobs/example-company-policy-officer/` | Synthetic sample |
+| `data/jobs/green-european-foundation-policy-consultant-on-green-transition/` | GEF consultancy |
+| `data/jobs/beuc-food-policy-trainee-6-months-traineeship/` | BEUC internship (reference) |
+| `data/jobs/icmpd-team-assistant/` | ICMPD Team Assistant (EU-MIDCAP / RRF) |
+| `data/jobs/polis-network-communications-intern/` | POLIS communications internship |
+| `data/jobs/giz-junior-advisor-for-the-global-gateway-investment-climate-reform-facility/` | GIZ GG ICR junior advisor |
+| `data/jobs/plan-international-climate-economic-empowerment-lead/` | Plan International global lead |
+| `data/jobs/transport-environment-communications-officer/` | T&E communications officer |
 
 Formal JSON Schema files for each job file live under [`schemas/`](schemas/). The human reference is [`docs/json-schema-reference.md`](../docs/json-schema-reference.md). Runtime validation remains in `src/brainjob/schemas.py`.
 

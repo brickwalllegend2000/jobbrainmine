@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "transport-environment-communications-officer",
+  "role": {
+    "title": "Communications Officer",
+    "company": "Transport & Environment",
+    "department": null,
+    "employment_type": "full-time",
+    "seniority": "officer",
+    "vacancies": 1
+  },
+  "location": {
+    "display": "Brussels (Ixelles), Belgium",
+    "city": "Brussels",
+    "country": "Belgium",
+    "work_arrangement": "hybrid",
+    "remote_restrictions": null,
+    "relocation_available": null
+  },
+  "compensation": {
+    "minimum": null,
+    "maximum": null,
+    "currency": "EUR",
+    "interval": "yearly",
+    "display_original": "Competitive salary based on experience, extensive benefits",
+    "benefits_original": null
+  },
+  "dates": {
+    "published": null,
+    "deadline": "2026-07-24",
+    "start_date": null,
+    "captured": "2026-07-21T01:41:42+02:00",
+    "last_verified": "2026-07-10T00:00:00+02:00"
+  },
+  "source": {
+    "url": "https://jobs.transportenvironment.org/o/communications-officer-1",
+    "domain": "jobs.transportenvironment.org",
+    "reference": "Transport & Environment - Communications Officer.pdf",
+    "capture_method": "manual",
+    "posting_status": "open"
+  },
+  "description_original": {
+    "format": "plain_text",
+    "content": "Communications Officer\n\nOrganisation: Transport & Environment (T&E)\nLocation: Brussels (Ixelles), Belgium\nEngagement: Permanent\nCompensation: Competitive salary based on experience, extensive benefits\nDeadline: 24 July 2026\nWork arrangement: Hybrid\nSource: https://jobs.transportenvironment.org/o/communications-officer-1\nSource documents: Transport & Environment - Communications Officer.pdf\n\n## About the role\n\nA media and creative communications role for someone who can plan campaigns, build narratives from data and research, and identify opportunities to elevate policy communications on transport decarbonisation and the energy transition.\n\n## Responsibilities\n\n- Manage relationships with EU affairs media, newswires, and correspondents.\n- Pitch stories and interviews and draft press releases, op-eds, and other media materials.\n- Develop creative campaign, communications, outreach, and engagement ideas for decision-makers.\n- Collaborate with policy teams on research ideas, story angles, and media narratives.\n- Monitor media and policy discussions and act on emerging opportunities.\n- Manage agencies and organise events, briefings, and webinars with researchers, experts, NGOs, and other stakeholders.\n- Identify and deliver video and visual communications opportunities.\n\n## Ideal skills and experience\n\n- Strategic contribution to advocacy, campaigning, communications, and policy goals.\n- Relevant experience, ideally in transport, environmental, or energy communications.\n- Strong internal and external stakeholder relationships, including remote teams.\n- Project planning, implementation, campaigning tools, digital tools, video, advertising, and other creative assets.\n- Entrepreneurial judgement and willingness to test new approaches.\n\n## Practicalities\n\nPermanent, full-time and based in Brussels, with at least two office days per week. Occasional travel to major EU capitals. Flexible working, including some home working, is available.\n",
+    "language": "en",
+    "captured_at": "2026-07-21T01:41:42+02:00",
+    "sha256": "807d2d694898573161cd58c46753751627ed63ec07fc014cea263da0d4d8f684"
+  },
+  "classification": {
+    "tags": [
+      "climate",
+      "communications",
+      "energy",
+      "mobility"
+    ],
+    "priority": "medium"
+  }
+}
