@@ -58,7 +58,9 @@ brainjob add \
   --tags policy eu-affairs
 ```
 
-`brainjob add` stamps `description_original.sha256` at capture time. After that, tooling verifies but never rewrites the original description text.
+`brainjob add` stamps `description_original.sha256` at capture time. After that, tooling verifies but never rewrites the original description text. Multiline and special-character descriptions are supported (values are JSON-escaped during template render).
+
+Agent-assisted capture (clean extract → map fields → add): see [`docs/skill-to-job-workflow.md`](../docs/skill-to-job-workflow.md).
 
 ### `brainjob validate`
 
@@ -152,9 +154,12 @@ Data is embedded at sync time from authoritative JSON under `data/jobs/`.
 3. Personal and AI-generated text belongs in `notes.json` (AI notes use `"author": "ai"`).
 4. `tracking/index.json` is generated; never treat it as the source of truth.
 
-## Example job
+## Sample jobs
 
-See `data/jobs/example-company-policy-officer/` for a complete sample bundle matching the project specification.
+| Directory | Notes |
+|-----------|-------|
+| `data/jobs/example-company-policy-officer/` | Synthetic sample matching the project specification |
+| `data/jobs/green-european-foundation-policy-consultant-on-green-transition/` | Real capture from call PDF text (skill-to-job workflow) |
 
 Formal JSON Schema files for each job file live under [`schemas/`](schemas/). The human reference is [`docs/json-schema-reference.md`](../docs/json-schema-reference.md). Runtime validation remains in `src/brainjob/schemas.py`.
 

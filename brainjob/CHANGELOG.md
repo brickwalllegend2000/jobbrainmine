@@ -14,10 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - JSON schema reference document at `docs/json-schema-reference.md`
 - `brainjob status` pipeline summary command
 - Live dashboard on GitHub Pages: https://brickwalllegend2000.github.io/jobbrainmine/
+- Sample vacancy: Green European Foundation -- Policy Consultant on Green Transition
+- Cross-tool skills and workflow guide for capturing postings (`skills/`, `docs/skill-to-job-workflow.md`)
 
 ### Fixed
 
 - Pages publish workflow CLI flag order (`brainjob --root …`) so deploys succeed
+- `brainjob add` template rendering for multiline / special-character descriptions (JSON-escape replacements)
 
 ## [0.1.0] - 2026-07-20
 

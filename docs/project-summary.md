@@ -83,11 +83,22 @@ The dashboard embeds job data at sync time and provides:
 | Frontend | Vanilla HTML/CSS/JS inlined at sync time |
 | License | MIT |
 
+### Agent skills
+
+Cross-tool skills under [`skills/`](../skills/) help capture vacancies from messy posting text:
+
+| Skill | Role |
+|-------|------|
+| `extracted-output-formatter` | Clean OCR/scrape/LLM extracts without losing information |
+| `brainjob-add-job` | Map fields and create a job via `brainjob add` |
+
+Adapters cover GitHub Copilot, Cursor/generic agents, Claude, and ChatGPT. End-to-end guide: [skill-to-job-workflow.md](./skill-to-job-workflow.md).
+
 ### Current maturity
 
-- **Version:** 0.1.0 ([CHANGELOG](../brainjob/CHANGELOG.md))
-- **Status:** Functional MVP with CLI, validation, sync, watch, archive, status, dashboard, formal JSON schemas, example job, and test coverage across all major modules
-- **History:** Initial commit plus feature PRs for the JSON-only system, CI/Pages, docs, and Phase A+B hardening
+- **Version:** 0.1.0 ([CHANGELOG](../brainjob/CHANGELOG.md)); Unreleased notes cover Pages, skills workflow, and `add` multiline fix
+- **Status:** Functional MVP with CLI, validation, sync, watch, archive, status, dashboard, formal JSON schemas, sample jobs, agent skills, and test coverage across all major modules
+- **History:** Initial commit plus feature PRs for the JSON-only system, CI/Pages, docs, Phase A+B hardening, and skill-to-job capture workflow
 - **Plane backlog:** JOBBRAINMI-1 through JOBBRAINMI-9 (MVP) and JOBBRAINMI-10 through JOBBRAINMI-16 (Phase A+B) are Done (see [work-breakdown.md](./work-breakdown.md) sections 12–13)
 
 ### Example workflow
@@ -96,7 +107,7 @@ The dashboard embeds job data at sync time and provides:
 cd brainjob
 python -m pip install -e ".[dev]"
 
-# Add a vacancy from a posting
+# Add a vacancy from a posting (multiline --description is supported)
 brainjob add \
   --title "Policy Officer" \
   --company "Example Company" \
@@ -115,4 +126,11 @@ brainjob sync
 # Live:  https://brickwalllegend2000.github.io/jobbrainmine/
 ```
 
-See `brainjob/data/jobs/example-company-policy-officer/` for a complete sample job bundle.
+For agent-assisted capture (format then add), see [skill-to-job-workflow.md](./skill-to-job-workflow.md).
+
+Sample job bundles under `brainjob/data/jobs/`:
+
+| Job id | Role |
+|--------|------|
+| `example-company-policy-officer` | Spec sample (synthetic) |
+| `green-european-foundation-policy-consultant-on-green-transition` | Real capture from call PDF text |
