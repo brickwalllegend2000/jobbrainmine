@@ -7,9 +7,14 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
-from brainjob.io import load_json, save_json
 from brainjob.integrity import verify_description_original
-from brainjob.paths import dashboard_path, index_path, iter_active_job_dirs, tracking_dir
+from brainjob.io import load_json, save_json
+from brainjob.paths import (
+    dashboard_path,
+    index_path,
+    iter_active_job_dirs,
+    tracking_dir,
+)
 from brainjob.validate import validate_workspace
 
 

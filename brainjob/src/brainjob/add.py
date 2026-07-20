@@ -8,8 +8,8 @@ from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from brainjob.io import load_json, save_json
 from brainjob.integrity import stamp_description_original
+from brainjob.io import load_json, save_json
 from brainjob.paths import iter_active_job_dirs, job_dir, slugify, templates_dir
 
 

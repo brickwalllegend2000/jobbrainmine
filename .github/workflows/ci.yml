@@ -26,6 +26,9 @@ jobs:
       - name: Install brainjob
         run: python -m pip install -e ".[dev]"
 
+      - name: Lint
+        run: ruff check src tests
+
       - name: Run tests
         run: python -m pytest
 
