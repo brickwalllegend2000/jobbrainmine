@@ -39,3 +39,17 @@ def test_sync_check_detects_stale_index(workspace_root: Path):
     ok, message = sync_workspace(workspace_root, check_only=True)
     assert ok is False
     assert "stale" in message
+
+
+def test_sync_check_ignores_generated_at(workspace_root: Path):
+    sync_workspace(workspace_root)
+    index_path = workspace_root / "tracking" / "index.json"
+    index = load_json(index_path)
+    index["generated_at"] = "2000-01-01T00:00:00+00:00"
+    index_path.write_text(
+        __import__("json").dumps(index, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    ok, message = sync_workspace(workspace_root, check_only=True)
+    assert ok is True, message

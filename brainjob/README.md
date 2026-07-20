@@ -109,6 +109,8 @@ Archived jobs are excluded from the generated index and dashboard.
 
 Open `tracking/dashboard.html` in a browser after running `brainjob sync`.
 
+On `main`, CI also regenerates `tracking/` and publishes the dashboard to GitHub Pages at `https://brickwalllegend2000.github.io/jobbrainmine/` (enable Pages source: GitHub Actions once after first deploy).
+
 The dashboard includes:
 
 - Pipeline stats and status filters
