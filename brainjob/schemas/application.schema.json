@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brickwalllegend2000/jobbrainmine/brainjob/schemas/application.schema.json",
+  "title": "Brainjob application.json",
+  "description": "Application workflow for a job. job_id must match the parent directory name (enforced by Python).",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["job_id", "status", "timeline", "interviews", "assessments"],
+  "properties": {
+    "job_id": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": [
+        "saved",
+        "preparing",
+        "applied",
+        "interviewing",
+        "assessment",
+        "offer",
+        "accepted",
+        "rejected",
+        "withdrawn",
+        "archived"
+      ]
+    },
+    "saved_date": { "type": ["string", "null"], "format": "date" },
+    "applied_date": { "type": ["string", "null"], "format": "date" },
+    "withdrawn_date": { "type": ["string", "null"], "format": "date" },
+    "decision_date": { "type": ["string", "null"], "format": "date" },
+    "next_action": {
+      "type": ["object", "null"],
+      "required": ["completed"],
+      "properties": {
+        "description": { "type": ["string", "null"] },
+        "due": { "type": ["string", "null"], "format": "date" },
+        "completed": { "type": "boolean" }
+      }
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "timestamp": { "type": ["string", "null"] },
+          "type": { "type": "string", "minLength": 1 },
+          "description": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "interviews": { "type": "array" },
+    "assessments": { "type": "array" },
+    "offer": { "type": ["object", "null"] },
+    "outcome": { "type": ["string", "null"] }
+  }
+}

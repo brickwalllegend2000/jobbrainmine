@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brickwalllegend2000/jobbrainmine/brainjob/schemas/documents.schema.json",
+  "title": "Brainjob documents.json",
+  "description": "Document metadata for a vacancy. job_id must match the parent directory name (enforced by Python).",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["job_id", "documents"],
+  "properties": {
+    "job_id": { "type": "string", "minLength": 1 },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "path", "submitted"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["cv", "cover_letter", "portfolio", "other"]
+          },
+          "path": { "type": "string", "minLength": 1 },
+          "version": { "type": ["integer", "null"] },
+          "created_at": { "type": ["string", "null"] },
+          "submitted": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
