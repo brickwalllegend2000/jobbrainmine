@@ -6,6 +6,7 @@ Documentation for the [jobbrainmine](https://github.com/brickwalllegend2000/jobb
 |----------|-------------|
 | [Project summary](./project-summary.md) | What the project does, architecture, and current capabilities |
 | [Work breakdown](./work-breakdown.md) | Work breakdown structure (WBS), including Plane backlog closure for JOBBRAINMI-1..9 |
+| [Phase A+B plan](./plans/2026-07-20-phase-a-b-hardening-and-tooling.md) | Implementation plan and proposed Plane IDs JOBBRAINMI-10..16 for hardening and tooling |
 
 ## Quick start
 

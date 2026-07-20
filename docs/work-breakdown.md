@@ -135,18 +135,20 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 
 Phases group the **Planned** items above into logical delivery order.
 
+**Implementation plan (Phase A + B):** [plans/2026-07-20-phase-a-b-hardening-and-tooling.md](./plans/2026-07-20-phase-a-b-hardening-and-tooling.md) maps work to proposed Plane IDs **JOBBRAINMI-10..16**, file touches, acceptance criteria, and sequencing.
+
 ### Phase A -- Hardening (low risk, high value)
 
-- 7.8 CI workflow (validate + pytest + sync --check)
-- 6.6 Pre-commit hooks
-- 1.6 CHANGELOG
-- 7.10 Lint (ruff)
+- 7.8 CI workflow (validate + pytest + sync --check) -- JOBBRAINMI-10
+- 7.10 Lint (ruff) -- JOBBRAINMI-12
+- 6.6 Pre-commit hooks -- JOBBRAINMI-11
+- 1.6 CHANGELOG -- JOBBRAINMI-13
 
 ### Phase B -- Spec and tooling clarity
 
-- 1.5 JSON schema reference document
-- 6.5 Formal JSON Schema files
-- 4.8 `brainjob status` quick summary command
+- 6.5 Formal JSON Schema files -- JOBBRAINMI-14
+- 1.5 JSON schema reference document -- JOBBRAINMI-15
+- 4.8 `brainjob status` quick summary command -- JOBBRAINMI-16
 
 ### Phase C -- Import and export
 
@@ -222,3 +224,21 @@ The Plane backlog items **JOBBRAINMI-1** through **JOBBRAINMI-9** describe the B
 | JOBBRAINMI-1 | Comprehensive tests | Done | `brainjob/tests/` (pytest) |
 
 **Out of scope for this closure:** live URL verification of employer postings, formal JSON Schema (`.json`) files, CI/pre-commit/CHANGELOG/ruff (WBS Phase A), and other Planned WBS items in sections 1–8 above.
+
+---
+
+## 13. Plane backlog -- Phase A + B (proposed)
+
+Next Plane issues after MVP closure. Full implementation plan: [plans/2026-07-20-phase-a-b-hardening-and-tooling.md](./plans/2026-07-20-phase-a-b-hardening-and-tooling.md).
+
+| Plane ID | Phase | WBS | Issue name | Status |
+|----------|-------|-----|------------|--------|
+| JOBBRAINMI-10 | A | 7.8 | CI workflow (pytest + validate + sync --check) | Planned |
+| JOBBRAINMI-11 | A | 6.6 | Pre-commit hooks | Planned |
+| JOBBRAINMI-12 | A | 7.10 | Ruff lint configuration | Planned |
+| JOBBRAINMI-13 | A | 1.6 | CHANGELOG for v0.1.0 | Planned |
+| JOBBRAINMI-14 | B | 6.5 | Formal JSON Schema files | Planned |
+| JOBBRAINMI-15 | B | 1.5 | JSON schema reference document | Planned |
+| JOBBRAINMI-16 | B | 4.8 | `brainjob status` command | Planned |
+
+**Delivery order:** 10 → 12 → 11 → 13 → 14 → 15 → 16 (13 and 16 can parallelize once CI exists).
