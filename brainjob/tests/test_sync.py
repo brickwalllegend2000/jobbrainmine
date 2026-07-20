@@ -1,17 +1,18 @@
 """Sync command tests."""
 
+import json
 from pathlib import Path
 
 from brainjob.io import load_json
 from brainjob.sync import sync_workspace
 
 
-def test_sync_generates_index_and_dashboard(workspace_root: Path):
-    ok, message = sync_workspace(workspace_root)
+def test_sync_generates_index_and_dashboard(isolated_workspace: Path):
+    ok, message = sync_workspace(isolated_workspace)
     assert ok, message
 
-    index_path = workspace_root / "tracking" / "index.json"
-    dashboard_path = workspace_root / "tracking" / "dashboard.html"
+    index_path = isolated_workspace / "tracking" / "index.json"
+    dashboard_path = isolated_workspace / "tracking" / "dashboard.html"
 
     assert index_path.is_file()
     assert dashboard_path.is_file()
@@ -26,30 +27,30 @@ def test_sync_generates_index_and_dashboard(workspace_root: Path):
     assert "example-company-policy-officer" in html
 
 
-def test_sync_check_detects_stale_index(workspace_root: Path):
-    sync_workspace(workspace_root)
-    ok, _ = sync_workspace(workspace_root, check_only=True)
+def test_sync_check_detects_stale_index(isolated_workspace: Path):
+    sync_workspace(isolated_workspace)
+    ok, _ = sync_workspace(isolated_workspace, check_only=True)
     assert ok is True
 
-    index_path = workspace_root / "tracking" / "index.json"
+    index_path = isolated_workspace / "tracking" / "index.json"
     index = load_json(index_path)
     index["stats"]["total_jobs"] = 999
-    index_path.write_text(__import__("json").dumps(index), encoding="utf-8")
+    index_path.write_text(json.dumps(index), encoding="utf-8")
 
-    ok, message = sync_workspace(workspace_root, check_only=True)
+    ok, message = sync_workspace(isolated_workspace, check_only=True)
     assert ok is False
     assert "stale" in message
 
 
-def test_sync_check_ignores_generated_at(workspace_root: Path):
-    sync_workspace(workspace_root)
-    index_path = workspace_root / "tracking" / "index.json"
+def test_sync_check_ignores_generated_at(isolated_workspace: Path):
+    sync_workspace(isolated_workspace)
+    index_path = isolated_workspace / "tracking" / "index.json"
     index = load_json(index_path)
     index["generated_at"] = "2000-01-01T00:00:00+00:00"
     index_path.write_text(
-        __import__("json").dumps(index, indent=2) + "\n",
+        json.dumps(index, indent=2) + "\n",
         encoding="utf-8",
     )
 
-    ok, message = sync_workspace(workspace_root, check_only=True)
+    ok, message = sync_workspace(isolated_workspace, check_only=True)
     assert ok is True, message

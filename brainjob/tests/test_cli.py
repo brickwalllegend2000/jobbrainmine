@@ -5,10 +5,10 @@ from pathlib import Path
 from brainjob.cli import main
 
 
-def test_cli_validate_and_sync(workspace_root: Path):
-    assert main(["--root", str(workspace_root), "validate"]) == 0
-    assert main(["--root", str(workspace_root), "sync"]) == 0
-    assert main(["--root", str(workspace_root), "sync", "--check"]) == 0
+def test_cli_validate_and_sync(isolated_workspace: Path):
+    assert main(["--root", str(isolated_workspace), "validate"]) == 0
+    assert main(["--root", str(isolated_workspace), "sync"]) == 0
+    assert main(["--root", str(isolated_workspace), "sync", "--check"]) == 0
 
 
 def test_cli_add(workspace_root: Path, tmp_path: Path):
