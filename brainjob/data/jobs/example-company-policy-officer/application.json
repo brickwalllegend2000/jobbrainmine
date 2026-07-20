@@ -1,0 +1,24 @@
+{
+  "job_id": "example-company-policy-officer",
+  "status": "preparing",
+  "saved_date": "2026-07-20",
+  "applied_date": null,
+  "withdrawn_date": null,
+  "decision_date": null,
+  "next_action": {
+    "description": "Prepare cover letter",
+    "due": "2026-07-28",
+    "completed": false
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-07-20T14:30:00+02:00",
+      "type": "saved",
+      "description": "Vacancy added to Brainjob"
+    }
+  ],
+  "interviews": [],
+  "assessments": [],
+  "offer": null,
+  "outcome": null
+}

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brainjob Dashboard</title>
+  <style>
+:root {
+  --bg: #0f1419;
+  --panel: #1a2332;
+  --text: #e7ecf3;
+  --muted: #9aa7b8;
+  --accent: #5b9fd4;
+  --good: #3ecf8e;
+  --warn: #f0b429;
+  --bad: #ef6461;
+  --border: #2a3648;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --sans: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.wrap {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header, .site-footer {
+  padding: 1.25rem 0;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(26, 35, 50, 0.6);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.hidden { display: none; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.stat-card .value {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.stat-card .label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: end;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.filters select,
+.filters input[type="search"] {
+  min-width: 180px;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.filters .checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 1.2rem;
+}
+
+.job-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.job-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+}
+
+.job-card:hover {
+  border-color: var(--accent);
+}
+
+.job-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+.badge.status { border-color: var(--accent); color: var(--accent); }
+.badge.priority-high { border-color: var(--bad); color: var(--bad); }
+.badge.priority-medium { border-color: var(--warn); color: var(--warn); }
+.badge.priority-low { border-color: var(--good); color: var(--good); }
+.badge.overdue { border-color: var(--bad); color: var(--bad); }
+.badge.integrity-bad { border-color: var(--bad); color: var(--bad); }
+.badge.integrity-ok { border-color: var(--good); color: var(--good); }
+
+.btn-secondary {
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.detail-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-section h4 {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+
+.detail-section ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.description-box {
+  white-space: pre-wrap;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.integrity {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.integrity.ok { color: var(--good); }
+.integrity.bad { color: var(--bad); }
+
+code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+}
+
+@media (max-width: 640px) {
+  .filters select,
+  .filters input[type="search"] {
+    min-width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Brainjob</h1>
+      <p class="subtitle">JSON-only job search tracker</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="stats-panel" class="panel"></section>
+    <section id="filters-panel" class="panel">
+      <div class="filters">
+        <label>
+          Status
+          <select id="filter-status">
+            <option value="">All statuses</option>
+          </select>
+        </label>
+        <label>
+          Priority
+          <select id="filter-priority">
+            <option value="">All priorities</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="filter-overdue"> Overdue actions only
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="filter-integrity"> Integrity issues only
+        </label>
+        <input type="search" id="filter-search" placeholder="Search title, company, tags">
+      </div>
+    </section>
+    <section id="jobs-panel" class="panel"></section>
+    <section id="detail-panel" class="panel hidden">
+      <button type="button" id="detail-close" class="btn-secondary">Close detail</button>
+      <div id="detail-content"></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap">
+    <p>Generated at <span id="generated-at"></span>. Authoritative data lives under <code>data/jobs/</code>.</p>
+  </footer>
+  <script id="brainjob-data" type="application/json">{"schema_version": 1, "generated_at": "2026-07-20T04:59:24+00:00", "stats": {"total_jobs": 1, "by_status": {"preparing": 1}, "overdue_actions": 0, "upcoming_deadlines": 1}, "jobs": [{"id": "example-company-policy-officer", "role": {"title": "Policy Officer", "company": "Example Company", "department": "European Affairs", "employment_type": "full-time", "seniority": null, "vacancies": 1}, "location": {"display": "Brussels, Belgium", "city": "Brussels", "country": "Belgium", "work_arrangement": "hybrid", "remote_restrictions": null, "relocation_available": null}, "compensation": {"minimum": null, "maximum": null, "currency": "EUR", "interval": "yearly", "display_original": null, "benefits_original": null}, "dates": {"published": null, "deadline": "2026-08-15", "start_date": null, "captured": "2026-07-20T14:30:00+02:00", "last_verified": "2026-07-20T14:30:00+02:00"}, "source": {"url": "https://example.com/jobs/policy-officer", "domain": "example.com", "reference": null, "capture_method": "manual", "posting_status": "open"}, "classification": {"tags": ["policy", "eu-affairs"], "priority": "medium"}, "description_original": {"format": "plain_text", "content": "The complete job description is pasted here exactly as published.", "language": "en", "captured_at": "2026-07-20T14:30:00+02:00", "sha256": "d64e54f894b3d017c37d80456a6bcd4fb1a5536a7a5cf51447718ae227347bd8"}, "integrity": {"valid": true, "sha256": "d64e54f894b3d017c37d80456a6bcd4fb1a5536a7a5cf51447718ae227347bd8", "error": null}, "application": {"status": "preparing", "saved_date": "2026-07-20", "applied_date": null, "next_action": {"description": "Prepare cover letter", "due": "2026-07-28", "completed": false}, "overdue_action": false, "timeline": [{"timestamp": "2026-07-20T14:30:00+02:00", "type": "saved", "description": "Vacancy added to Brainjob"}], "interviews": [], "assessments": [], "offer": null, "outcome": null}, "contacts": [{"name": "Jane Smith", "role": "Hiring Manager", "organisation": "Example Company", "email": null, "phone": null, "linkedin": null, "relationship": "unknown", "notes": null}], "notes": [{"id": "note-001", "created_at": "2026-07-20T15:00:00+02:00", "author": "user", "category": "research", "content": "Personal research goes here."}], "documents": {"items": [{"type": "cv", "path": "documents/cv-policy-officer.pdf", "version": 1, "created_at": "2026-07-25T10:00:00+02:00", "submitted": false}], "submitted_count": 0, "pending_count": 1}, "data_path": "../data/jobs/example-company-policy-officer"}]}</script>
+  <script>
+(function () {
+  const data = JSON.parse(document.getElementById("brainjob-data").textContent);
+  const jobs = data.jobs || [];
+  const statsPanel = document.getElementById("stats-panel");
+  const jobsPanel = document.getElementById("jobs-panel");
+  const detailPanel = document.getElementById("detail-panel");
+  const detailContent = document.getElementById("detail-content");
+  const generatedAt = document.getElementById("generated-at");
+
+  const filterStatus = document.getElementById("filter-status");
+  const filterPriority = document.getElementById("filter-priority");
+  const filterOverdue = document.getElementById("filter-overdue");
+  const filterIntegrity = document.getElementById("filter-integrity");
+  const filterSearch = document.getElementById("filter-search");
+  const detailClose = document.getElementById("detail-close");
+
+  generatedAt.textContent = data.generated_at || "unknown";
+
+  function uniqueStatuses() {
+    const set = new Set(jobs.map((job) => job.application.status).filter(Boolean));
+    return Array.from(set).sort();
+  }
+
+  function renderStats() {
+    const stats = data.stats || {};
+    const byStatus = stats.by_status || {};
+    const statusCards = Object.entries(byStatus)
+      .map(
+        ([status, count]) =>
+          `<div class="stat-card"><div class="value">${count}</div><div class="label">${status}</div></div>`
+      )
+      .join("");
+
+    statsPanel.innerHTML = `
+      <div class="stats-grid">
+        <div class="stat-card"><div class="value">${stats.total_jobs || 0}</div><div class="label">Total jobs</div></div>
+        <div class="stat-card"><div class="value">${stats.overdue_actions || 0}</div><div class="label">Overdue actions</div></div>
+        <div class="stat-card"><div class="value">${stats.upcoming_deadlines || 0}</div><div class="label">Upcoming deadlines</div></div>
+        ${statusCards}
+      </div>`;
+  }
+
+  function populateStatusFilter() {
+    uniqueStatuses().forEach((status) => {
+      const option = document.createElement("option");
+      option.value = status;
+      option.textContent = status;
+      filterStatus.appendChild(option);
+    });
+  }
+
+  function matchesFilters(job) {
+    const status = filterStatus.value;
+    const priority = filterPriority.value;
+    const overdueOnly = filterOverdue.checked;
+    const integrityOnly = filterIntegrity.checked;
+    const query = filterSearch.value.trim().toLowerCase();
+
+    if (status && job.application.status !== status) return false;
+    if (priority && job.classification.priority !== priority) return false;
+    if (overdueOnly && !job.application.overdue_action) return false;
+    if (integrityOnly && job.integrity.valid) return false;
+
+    if (query) {
+      const haystack = [
+        job.role.title,
+        job.role.company,
+        job.location.display,
+        (job.classification.tags || []).join(" "),
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      if (!haystack.includes(query)) return false;
+    }
+    return true;
+  }
+
+  function renderJobCard(job) {
+    const priority = job.classification.priority || "medium";
+    const overdue = job.application.overdue_action;
+    const integrityClass = job.integrity.valid ? "integrity-ok" : "integrity-bad";
+    const integrityLabel = job.integrity.valid ? "integrity ok" : "integrity issue";
+    const next = job.application.next_action;
+    const nextText = next && !next.completed
+      ? `Next: ${next.description}${next.due ? " (due " + next.due + ")" : ""}`
+      : "No pending next action";
+
+    return `
+      <article class="job-card" data-job-id="${job.id}">
+        <h3>${escapeHtml(job.role.title)} @ ${escapeHtml(job.role.company)}</h3>
+        <div class="job-meta">
+          <span class="badge status">${escapeHtml(job.application.status || "unknown")}</span>
+          <span class="badge priority-${priority}">${priority} priority</span>
+          ${overdue ? '<span class="badge overdue">overdue action</span>' : ""}
+          <span class="badge ${integrityClass}">${integrityLabel}</span>
+          <span>${escapeHtml(job.location.display || "")}</span>
+          ${job.dates.deadline ? `<span>Deadline: ${escapeHtml(job.dates.deadline)}</span>` : ""}
+        </div>
+        <p>${escapeHtml(nextText)}</p>
+      </article>`;
+  }
+
+  function renderJobs() {
+    const filtered = jobs.filter(matchesFilters);
+    if (!filtered.length) {
+      jobsPanel.innerHTML = "<p>No jobs match the current filters.</p>";
+      return;
+    }
+    jobsPanel.innerHTML = `<div class="job-list">${filtered.map(renderJobCard).join("")}</div>`;
+    jobsPanel.querySelectorAll(".job-card").forEach((card) => {
+      card.addEventListener("click", () => showDetail(card.dataset.jobId));
+    });
+  }
+
+  function showDetail(jobId) {
+    const job = jobs.find((entry) => entry.id === jobId);
+    if (!job) return;
+
+    const interviews = (job.application.interviews || [])
+      .map((item) => `<li>${escapeHtml(JSON.stringify(item))}</li>`)
+      .join("") || "<li>None recorded</li>";
+
+    const assessments = (job.application.assessments || [])
+      .map((item) => `<li>${escapeHtml(JSON.stringify(item))}</li>`)
+      .join("") || "<li>None recorded</li>";
+
+    const timeline = (job.application.timeline || [])
+      .map(
+        (event) =>
+          `<li><strong>${escapeHtml(event.type)}</strong> — ${escapeHtml(event.timestamp || "")}: ${escapeHtml(event.description || "")}</li>`
+      )
+      .join("") || "<li>Empty timeline</li>";
+
+    const contacts = (job.contacts || [])
+      .map(
+        (contact) =>
+          `<li>${escapeHtml(contact.name)} (${escapeHtml(contact.role || "contact")}) — ${escapeHtml(contact.organisation || "")}</li>`
+      )
+      .join("") || "<li>No contacts</li>";
+
+    const notes = (job.notes || [])
+      .map(
+        (note) =>
+          `<li><strong>${escapeHtml(note.author)}</strong> [${escapeHtml(note.category || "general")}]: ${escapeHtml(note.content)}</li>`
+      )
+      .join("") || "<li>No notes</li>";
+
+    const documents = (job.documents.items || [])
+      .map(
+        (doc) =>
+          `<li>${escapeHtml(doc.type)} v${doc.version} — ${escapeHtml(doc.path)} (${doc.submitted ? "submitted" : "pending"})</li>`
+      )
+      .join("") || "<li>No documents</li>";
+
+    detailContent.innerHTML = `
+      <div class="detail-grid">
+        <section class="detail-section">
+          <h4>${escapeHtml(job.role.title)} @ ${escapeHtml(job.role.company)}</h4>
+          <p>Status: ${escapeHtml(job.application.status)} | Saved: ${escapeHtml(job.application.saved_date || "n/a")} | Applied: ${escapeHtml(job.application.applied_date || "n/a")}</p>
+          <p>Location: ${escapeHtml(job.location.display || "n/a")} (${escapeHtml(job.location.work_arrangement || "unknown")})</p>
+          <p>Compensation: ${formatCompensation(job.compensation)}</p>
+          <p>Source: <a href="${escapeAttr(job.source.url)}" target="_blank" rel="noopener">${escapeHtml(job.source.url || "")}</a></p>
+          <p>Captured: ${escapeHtml(job.dates.captured || "n/a")} | Verified: ${escapeHtml(job.dates.last_verified || "n/a")}</p>
+        </section>
+        <section class="detail-section">
+          <h4>Original content integrity</h4>
+          <p class="integrity ${job.integrity.valid ? "ok" : "bad"}">
+            SHA-256: ${escapeHtml(job.integrity.sha256 || "n/a")}<br>
+            ${job.integrity.valid ? "Content hash verified." : escapeHtml(job.integrity.error || "Integrity check failed.")}
+          </p>
+        </section>
+        <section class="detail-section">
+          <h4>Original job description</h4>
+          <div class="description-box">${escapeHtml(job.description_original.content || "")}</div>
+        </section>
+        <section class="detail-section">
+          <h4>Application timeline</h4>
+          <ul>${timeline}</ul>
+        </section>
+        <section class="detail-section">
+          <h4>Interviews & assessments</h4>
+          <p><strong>Interviews</strong></p>
+          <ul>${interviews}</ul>
+          <p><strong>Assessments</strong></p>
+          <ul>${assessments}</ul>
+        </section>
+        <section class="detail-section">
+          <h4>Contacts</h4>
+          <ul>${contacts}</ul>
+        </section>
+        <section class="detail-section">
+          <h4>Notes</h4>
+          <ul>${notes}</ul>
+        </section>
+        <section class="detail-section">
+          <h4>Documents (${job.documents.submitted_count} submitted, ${job.documents.pending_count} pending)</h4>
+          <ul>${documents}</ul>
+        </section>
+      </div>`;
+
+    detailPanel.classList.remove("hidden");
+    detailPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function formatCompensation(comp) {
+    if (!comp) return "n/a";
+    if (comp.display_original) return comp.display_original;
+    const min = comp.minimum;
+    const max = comp.maximum;
+    const currency = comp.currency || "";
+    const interval = comp.interval || "";
+    if (min == null && max == null) return "Not specified";
+    if (min != null && max != null) return `${min}-${max} ${currency} ${interval}`.trim();
+    return `${min ?? max} ${currency} ${interval}`.trim();
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
+
+  function escapeAttr(value) {
+    return escapeHtml(value).replaceAll("'", "&#39;");
+  }
+
+  [filterStatus, filterPriority, filterOverdue, filterIntegrity, filterSearch].forEach((el) => {
+    el.addEventListener("input", renderJobs);
+    el.addEventListener("change", renderJobs);
+  });
+
+  detailClose.addEventListener("click", () => detailPanel.classList.add("hidden"));
+
+  renderStats();
+  populateStatusFilter();
+  renderJobs();
+})();
+
+  </script>
+</body>
+</html>

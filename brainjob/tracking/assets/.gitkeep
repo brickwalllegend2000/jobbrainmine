@@ -1,0 +1,2 @@
+# Static assets referenced by tracking/dashboard.html are embedded at sync time.
+# Add optional files here if you extend the dashboard layout.
