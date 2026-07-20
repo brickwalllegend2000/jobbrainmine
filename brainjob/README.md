@@ -107,9 +107,20 @@ Archived jobs are excluded from the generated index and dashboard.
 
 ## Dashboard
 
-Open `tracking/dashboard.html` in a browser after running `brainjob sync`.
+| Access | Link |
+|--------|------|
+| Live (GitHub Pages) | [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) |
+| Local | [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html) |
 
-On `main`, CI also regenerates `tracking/` and publishes the dashboard to GitHub Pages at `https://brickwalllegend2000.github.io/jobbrainmine/` (enable Pages source: GitHub Actions once after first deploy).
+After `brainjob sync`, serve the tracking folder locally:
+
+```bash
+python -m http.server 8000 --directory tracking
+```
+
+Then open [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html).
+
+On `main`, CI also regenerates `tracking/` and publishes the dashboard to GitHub Pages at [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) (enable Pages source: GitHub Actions once after first deploy).
 
 The dashboard includes:
 
