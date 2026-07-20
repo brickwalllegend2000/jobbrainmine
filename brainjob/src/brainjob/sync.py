@@ -223,7 +223,10 @@ def sync_workspace(root: Path, *, check_only: bool = False) -> tuple[bool, str]:
         if not index_file.is_file():
             return False, "tracking/index.json is missing (run brainjob sync)."
         existing = load_json(index_file)
-        if existing == index_data:
+        # generated_at is wall-clock; ignore it when judging staleness.
+        expected = {k: v for k, v in index_data.items() if k != "generated_at"}
+        current = {k: v for k, v in existing.items() if k != "generated_at"}
+        if current == expected:
             return True, "tracking/index.json is up to date."
         return False, "tracking/index.json is stale (run brainjob sync)."
 
