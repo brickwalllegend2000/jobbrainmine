@@ -11,10 +11,10 @@ brainjob sync
 
 ## Dashboard
 
-| Access | Link |
-|--------|------|
-| Live (GitHub Pages) | [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) |
-| Local | [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html) |
+| Access | Address | Requirement |
+|--------|---------|-------------|
+| Live | [Open the GitHub Pages dashboard](https://brickwalllegend2000.github.io/jobbrainmine/) | Latest Pages deployment must be successful |
+| Local | `http://localhost:8000/dashboard.html` | Run the local server below on this computer |
 
 Serve the dashboard locally after syncing:
 
@@ -24,7 +24,7 @@ brainjob sync
 python -m http.server 8000 --directory tracking
 ```
 
-Then open [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html).
+While that command is running, open `http://localhost:8000/dashboard.html` on the same computer.
 
 ## CI and live dashboard
 
