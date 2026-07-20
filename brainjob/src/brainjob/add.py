@@ -36,7 +36,9 @@ def _today_iso(tz_name: str = "Europe/Brussels") -> str:
 def _render_template(template: dict[str, Any], replacements: dict[str, str]) -> dict[str, Any]:
     text = json.dumps(template)
     for key, value in replacements.items():
-        text = text.replace(f"{{{{{key}}}}}", value)
+        # Placeholders sit inside JSON strings; escape so newlines/quotes stay valid.
+        escaped = json.dumps(value)[1:-1]
+        text = text.replace(f"{{{{{key}}}}}", escaped)
     return json.loads(text)
 
 
@@ -101,8 +103,6 @@ def add_job(
         "PRIORITY": priority,
     }
 
-    target.mkdir(parents=True)
-
     job_template = load_json(templates / "job.json")
     job_data = _render_template(job_template, replacements)
     if tags:
@@ -115,11 +115,15 @@ def add_job(
     job_data["description_original"] = stamp_description_original(
         job_data["description_original"]
     )
-    save_json(target / "job.json", job_data)
 
+    companion: list[tuple[str, dict[str, Any]]] = []
     for filename in ("application.json", "contacts.json", "notes.json", "documents.json"):
         template = load_json(templates / filename)
-        data = _render_template(template, replacements)
+        companion.append((filename, _render_template(template, replacements)))
+
+    target.mkdir(parents=True)
+    save_json(target / "job.json", job_data)
+    for filename, data in companion:
         save_json(target / filename, data)
 
     return resolved_id
