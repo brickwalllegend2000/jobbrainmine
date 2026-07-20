@@ -59,4 +59,6 @@ Cross-tool skill content lives under `skills/`:
 
 GitHub-specific adapters live under `.github/skills/`. Adapters for Copilot, Cursor/generic, Claude, and ChatGPT live under each skill's `adapters/` folder.
 
-Workflow guide: [docs/skill-to-job-workflow.md](docs/skill-to-job-workflow.md).
+Workflow guide: [docs/skill-to-job-workflow.md](docs/skill-to-job-workflow.md) (includes a GEF worked example).
+
+Sample jobs under `brainjob/data/jobs/`: synthetic `example-company-policy-officer` and captured `green-european-foundation-policy-consultant-on-green-transition`.
