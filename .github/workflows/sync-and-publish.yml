@@ -28,6 +28,9 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -38,8 +41,8 @@ jobs:
 
       - name: Validate and sync
         run: |
-          brainjob validate --root brainjob
-          brainjob sync --root brainjob
+          brainjob --root brainjob validate
+          brainjob --root brainjob sync
 
       - name: Commit tracking artifacts
         run: |
@@ -57,6 +60,11 @@ jobs:
         run: |
           mkdir -p site
           cp brainjob/tracking/dashboard.html site/index.html
+
+      - name: Validate Pages artifact
+        run: |
+          test -s site/index.html
+          grep -Fq '<title>Brainjob Dashboard</title>' site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
