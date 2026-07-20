@@ -1,12 +1,12 @@
-# extracted-output-formatter (cross-tool canonical source)
+# brainjob-add-job (cross-tool canonical source)
 
 This directory is the single source of truth for the skill content.
 
 ## Structure
 
-- `SKILL.md` — canonical instructions and examples
-- `references/format-specs.md` — shared format reference
-- `adapters/` — tool-specific wrappers/metadata
+- `SKILL.md` -- canonical instructions and workflow
+- `references/field-map.md` -- extracted fields to `brainjob add` flags
+- `adapters/` -- tool-specific wrappers/metadata
 
 ## Adapters
 
