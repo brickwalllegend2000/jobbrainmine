@@ -9,7 +9,22 @@ brainjob validate
 brainjob sync
 ```
 
-Open `brainjob/tracking/dashboard.html` after syncing.
+## Dashboard
+
+| Access | Link |
+|--------|------|
+| Live (GitHub Pages) | [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) |
+| Local | [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html) |
+
+Serve the dashboard locally after syncing:
+
+```bash
+cd brainjob
+brainjob sync
+python -m http.server 8000 --directory tracking
+```
+
+Then open [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html).
 
 ## CI and live dashboard
 
@@ -21,7 +36,7 @@ On pushes to `main` that change job data or sync code, GitHub Actions:
 
 After enabling Pages (Settings → Pages → Source: GitHub Actions), view it at:
 
-`https://brickwalllegend2000.github.io/jobbrainmine/`
+[https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/)
 
 Pull requests run pytest, validation, and `brainjob sync --check`.
 
