@@ -192,7 +192,7 @@ Small, independent tasks suitable for parallel work:
 
 | Slice | Files touched | Effort |
 |-------|---------------|--------|
-| Add GitHub Actions CI | `.github/workflows/` | Small |
+| Add GitHub Actions CI | `.github/workflows/` | Done |
 | JSON Schema export | `schemas/`, docs | Medium |
 | `brainjob status` command | `cli.py`, new module, tests | Small |
 | Pre-commit config | `.pre-commit-config.yaml` | Small |
