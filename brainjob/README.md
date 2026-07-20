@@ -160,6 +160,12 @@ Data is embedded at sync time from authoritative JSON under `data/jobs/`.
 |-----------|-------|
 | `data/jobs/example-company-policy-officer/` | Synthetic sample matching the project specification |
 | `data/jobs/green-european-foundation-policy-consultant-on-green-transition/` | Real capture from call PDF text (skill-to-job workflow) |
+| `data/jobs/beuc-food-policy-trainee-6-months-traineeship/` | BEUC internship (reference) |
+| `data/jobs/icmpd-team-assistant/` | ICMPD Team Assistant (EU-MIDCAP / RRF) |
+| `data/jobs/polis-network-communications-intern/` | POLIS communications internship |
+| `data/jobs/giz-junior-advisor-for-the-global-gateway-investment-climate-reform-facility/` | GIZ GG ICR junior advisor |
+| `data/jobs/plan-international-climate-economic-empowerment-lead/` | Plan International global lead |
+| `data/jobs/transport-environment-communications-officer/` | T&E communications officer |
 
 Formal JSON Schema files for each job file live under [`schemas/`](schemas/). The human reference is [`docs/json-schema-reference.md`](../docs/json-schema-reference.md). Runtime validation remains in `src/brainjob/schemas.py`.
 
