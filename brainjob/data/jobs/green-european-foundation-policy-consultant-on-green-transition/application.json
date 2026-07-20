@@ -1,0 +1,24 @@
+{
+  "job_id": "green-european-foundation-policy-consultant-on-green-transition",
+  "status": "saved",
+  "saved_date": "2026-07-21",
+  "applied_date": null,
+  "withdrawn_date": null,
+  "decision_date": null,
+  "next_action": {
+    "description": "Deadline passed (2026-07-14); archive or note outcome",
+    "due": "2026-07-20",
+    "completed": false
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-07-21T00:28:01+02:00",
+      "type": "saved",
+      "description": "Vacancy added to Brainjob"
+    }
+  ],
+  "interviews": [],
+  "assessments": [],
+  "offer": null,
+  "outcome": null
+}
