@@ -111,7 +111,7 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 | 7.5 | Archive workflow test | Done | `test_archive.py` |
 | 7.6 | CLI smoke tests | Done | `test_cli.py` |
 | 7.7 | Dashboard JS tests | Planned | No frontend test runner yet |
-| 7.8 | CI workflow (GitHub Actions) | Planned | pytest on push/PR |
+| 7.8 | CI workflow (GitHub Actions) | Done | pytest + validate + sync --check; sync-and-publish commits tracking/ and deploys Pages |
 | 7.9 | Coverage reporting | Planned | |
 | 7.10 | Lint/typecheck (ruff, mypy) | Planned | |
 
@@ -137,7 +137,7 @@ Phases group the **Planned** items above into logical delivery order.
 
 ### Phase A -- Hardening (low risk, high value)
 
-- 7.8 CI workflow (validate + pytest + sync --check)
+- 7.8 CI workflow (validate + pytest + sync --check) -- Done (also sync-and-publish + Pages)
 - 6.6 Pre-commit hooks
 - 1.6 CHANGELOG
 - 7.10 Lint (ruff)
@@ -195,7 +195,7 @@ Small, independent tasks suitable for parallel work:
 
 | Slice | Files touched | Effort |
 |-------|---------------|--------|
-| Add GitHub Actions CI | `.github/workflows/` | Small |
+| Add GitHub Actions CI | `.github/workflows/` | Done |
 | JSON Schema export | `schemas/`, docs | Medium |
 | `brainjob status` command | `cli.py`, new module, tests | Small |
 | Pre-commit config | `.pre-commit-config.yaml` | Small |
