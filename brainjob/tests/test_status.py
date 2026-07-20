@@ -28,14 +28,20 @@ def test_status_empty_workspace(tmp_path: Path):
     assert main(["--root", str(root), "status"]) == 0
 
 
-def test_status_counts_example_job(isolated_workspace: Path):
-    report = status_workspace(isolated_workspace, today=date(2026, 7, 20))
+def test_status_counts_example_job(workspace_root: Path, tmp_path: Path):
+    root = tmp_path / "workspace"
+    (root / "data" / "jobs").mkdir(parents=True)
+    (root / "tracking").mkdir()
+    src = workspace_root / "data" / "jobs" / "example-company-policy-officer"
+    shutil.copytree(src, root / "data" / "jobs" / "example-company-policy-officer")
+
+    report = status_workspace(root, today=date(2026, 7, 20))
     assert report.job_count == 1
     assert report.by_status == {"preparing": 1}
     assert report.upcoming_deadlines == 1
     assert report.overdue_next_actions == 0
     assert any(action.job_id == "example-company-policy-officer" for action in report.next_actions)
-    assert main(["--root", str(isolated_workspace), "status"]) == 0
+    assert main(["--root", str(root), "status"]) == 0
 
 
 def test_status_detects_overdue_next_action(workspace_root: Path, tmp_path: Path):
