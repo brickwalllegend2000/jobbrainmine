@@ -125,9 +125,9 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 |----|--------------|--------|-------|
 | 8.1 | `pyproject.toml` with console script | Done | `brainjob` entry point |
 | 8.2 | Editable install with dev extras | Done | `pip install -e ".[dev]"` |
-| 8.3 | PyPI publish | Planned | |
-| 8.4 | Docker image / devcontainer | Planned | |
-| 8.5 | Homebrew / system package | Planned | |
+| 8.3 | PyPI publish | Out of scope | External install / distribution dropped |
+| 8.4 | Docker image / devcontainer | Out of scope | External install / distribution dropped |
+| 8.5 | Homebrew / system package | Out of scope | External install / distribution dropped |
 
 ---
 
@@ -162,11 +162,6 @@ Phases group the **Planned** items above into logical delivery order.
 - 5.7 Dashboard dev workflow
 - 5.8 Accessibility pass
 - 4.9 Un-archive / restore
-
-### Phase E -- Distribution
-
-- 8.3 PyPI release
-- 8.4 Docker/devcontainer
 
 ---
 

@@ -325,7 +325,8 @@ JOBBRAINMI-16 (status) ── independent of 14/15; can parallelize after Phase 
 
 ## Out of scope (do not sneak in)
 
-- Phase C import/export, Phase D edit/restore/dashboard polish, Phase E PyPI/Docker
+- Phase C import/export, Phase D edit/restore/dashboard polish
+- External install / distribution (PyPI, Docker/devcontainer, Homebrew) -- removed; local editable install only
 - Live URL verification of employer postings
 - Replacing Python validation with JSON Schema at runtime
 - `brainjob status --json`
