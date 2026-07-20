@@ -120,8 +120,8 @@ Exits 1 when validation fails; overdue items are informational and do not fail t
 
 | Access | Link |
 |--------|------|
-| Live (GitHub Pages) | [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) |
-| Local | [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html) |
+| Live | [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) |
+| Local | `http://localhost:8000/dashboard.html` (after the commands below) |
 
 After `brainjob sync`, serve the tracking folder locally:
 
@@ -129,9 +129,9 @@ After `brainjob sync`, serve the tracking folder locally:
 python -m http.server 8000 --directory tracking
 ```
 
-Then open [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html).
+Then open `http://localhost:8000/dashboard.html` on the same machine.
 
-On `main`, CI also regenerates `tracking/` and publishes the dashboard to GitHub Pages at [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) (enable Pages source: GitHub Actions once after first deploy).
+On `main`, CI regenerates `tracking/` and publishes the dashboard to GitHub Pages at [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/).
 
 The dashboard includes:
 
