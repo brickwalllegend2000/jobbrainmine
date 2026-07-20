@@ -54,6 +54,7 @@ Archived jobs move to `data/jobs/_archive/<job-id>/` and are excluded from the d
 | `brainjob sync --check` | Exit 0 when tracking artifacts are up to date; exit 1 when stale or missing |
 | `brainjob watch` | Poll `data/jobs/` and auto-sync on JSON changes |
 | `brainjob archive <job-id>` | Mark archived, append timeline event, move directory to `_archive/` |
+| `brainjob status` | Print pipeline summary (counts, overdue actions, deadlines) without writing tracking |
 
 ### Dashboard
 
@@ -72,17 +73,17 @@ After `brainjob sync`, open `brainjob/tracking/dashboard.html` in a browser. The
 |-------|--------|
 | Language | Python 3.10+ |
 | Dependencies | Zero runtime dependencies (stdlib only) |
-| Dev dependencies | pytest |
+| Dev dependencies | pytest, ruff, pre-commit |
 | Packaging | setuptools (`pyproject.toml`) |
 | Frontend | Vanilla HTML/CSS/JS inlined at sync time |
 | License | MIT |
 
 ### Current maturity
 
-- **Version:** 0.1.0
-- **Status:** Functional MVP with CLI, validation, sync, watch, archive, dashboard, example job, and test coverage across all major modules
-- **History:** Initial commit plus one feature PR implementing the full JSON-only system
-- **Plane backlog:** JOBBRAINMI-1 through JOBBRAINMI-9 map to this MVP and are closed as Done (see [work-breakdown.md](./work-breakdown.md) section 12)
+- **Version:** 0.1.0 ([CHANGELOG](../brainjob/CHANGELOG.md))
+- **Status:** Functional MVP with CLI, validation, sync, watch, archive, status, dashboard, formal JSON schemas, example job, and test coverage across all major modules
+- **History:** Initial commit plus feature PRs for the JSON-only system, CI/Pages, docs, and Phase A+B hardening
+- **Plane backlog:** JOBBRAINMI-1 through JOBBRAINMI-9 (MVP) and JOBBRAINMI-10 through JOBBRAINMI-16 (Phase A+B) are Done (see [work-breakdown.md](./work-breakdown.md) sections 12–13)
 
 ### Example workflow
 

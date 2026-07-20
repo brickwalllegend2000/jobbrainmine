@@ -14,8 +14,8 @@ Legend: **Done** = implemented in v0.1.0 | **Partial** = exists but limited | **
 | 1.2 | Brainjob README (commands, layout, immutability rules) | Done | `brainjob/README.md` |
 | 1.3 | Docs folder (summary + WBS) | Done | `docs/` |
 | 1.4 | CONTRIBUTING / development guide | Planned | Coding standards, PR flow |
-| 1.5 | JSON schema reference (formal spec document) | Planned | Today validated in Python only |
-| 1.6 | CHANGELOG | Planned | Version history |
+| 1.5 | JSON schema reference (formal spec document) | Done | `docs/json-schema-reference.md` |
+| 1.6 | CHANGELOG | Done | `brainjob/CHANGELOG.md` |
 
 ---
 
@@ -63,7 +63,7 @@ Legend: **Done** = implemented in v0.1.0 | **Partial** = exists but limited | **
 | 4.5 | `brainjob watch` | Done | Configurable interval |
 | 4.6 | `brainjob archive <job-id>` | Done | Idempotent guard if already archived |
 | 4.7 | `brainjob edit` / interactive TUI | Planned | Today all edits are manual JSON |
-| 4.8 | `brainjob status` (quick summary) | Planned | |
+| 4.8 | `brainjob status` (quick summary) | Done | Text summary; validates first |
 | 4.9 | `brainjob restore` (un-archive) | Planned | |
 
 Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
@@ -94,8 +94,8 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 | 6.2 | Cross-file `job_id` consistency | Done | |
 | 6.3 | SHA-256 verification of original description | Done | Tamper detection |
 | 6.4 | Enum validation (status, author, doc type, etc.) | Done | |
-| 6.5 | JSON Schema (.json) files for external tools | Planned | |
-| 6.6 | Pre-commit hook integration | Planned | validate + sync --check |
+| 6.5 | JSON Schema (.json) files for external tools | Done | `brainjob/schemas/*.schema.json`; Python remains CI truth |
+| 6.6 | Pre-commit hook integration | Done | `.pre-commit-config.yaml` (ruff + validate + sync --check) |
 | 6.7 | Migration tooling for `schema_version` bumps | Planned | |
 
 ---
@@ -113,9 +113,9 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 | 7.7 | Dashboard JS tests | Planned | No frontend test runner yet |
 | 7.8 | CI workflow (GitHub Actions) | Done | pytest + validate + sync --check; sync-and-publish commits tracking/ and deploys Pages |
 | 7.9 | Coverage reporting | Planned | |
-| 7.10 | Lint/typecheck (ruff, mypy) | Planned | |
+| 7.10 | Lint/typecheck (ruff, mypy) | Done | ruff `E`/`F`/`I` in CI; mypy still Planned |
 
-**Current test count:** 13 tests across 6 files.
+**Current test count:** 17 tests across 7 files.
 
 ---
 
@@ -125,9 +125,9 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 |----|--------------|--------|-------|
 | 8.1 | `pyproject.toml` with console script | Done | `brainjob` entry point |
 | 8.2 | Editable install with dev extras | Done | `pip install -e ".[dev]"` |
-| 8.3 | PyPI publish | Planned | |
-| 8.4 | Docker image / devcontainer | Planned | |
-| 8.5 | Homebrew / system package | Planned | |
+| 8.3 | PyPI publish | Out of scope | External install / distribution dropped |
+| 8.4 | Docker image / devcontainer | Out of scope | External install / distribution dropped |
+| 8.5 | Homebrew / system package | Out of scope | External install / distribution dropped |
 
 ---
 
@@ -135,18 +135,20 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 
 Phases group the **Planned** items above into logical delivery order.
 
+**Implementation plan (Phase A + B):** [plans/2026-07-20-phase-a-b-hardening-and-tooling.md](./plans/2026-07-20-phase-a-b-hardening-and-tooling.md) maps work to proposed Plane IDs **JOBBRAINMI-10..16**, file touches, acceptance criteria, and sequencing.
+
 ### Phase A -- Hardening (low risk, high value)
 
-- 7.8 CI workflow (validate + pytest + sync --check) -- Done (also sync-and-publish + Pages)
-- 6.6 Pre-commit hooks
-- 1.6 CHANGELOG
-- 7.10 Lint (ruff)
+- 7.8 CI workflow (validate + pytest + sync --check) -- JOBBRAINMI-10 -- Done
+- 7.10 Lint (ruff) -- JOBBRAINMI-12 -- Done
+- 6.6 Pre-commit hooks -- JOBBRAINMI-11 -- Done
+- 1.6 CHANGELOG -- JOBBRAINMI-13 -- Done
 
 ### Phase B -- Spec and tooling clarity
 
-- 1.5 JSON schema reference document
-- 6.5 Formal JSON Schema files
-- 4.8 `brainjob status` quick summary command
+- 6.5 Formal JSON Schema files -- JOBBRAINMI-14 -- Done
+- 1.5 JSON schema reference document -- JOBBRAINMI-15 -- Done
+- 4.8 `brainjob status` quick summary command -- JOBBRAINMI-16 -- Done
 
 ### Phase C -- Import and export
 
@@ -160,11 +162,6 @@ Phases group the **Planned** items above into logical delivery order.
 - 5.7 Dashboard dev workflow
 - 5.8 Accessibility pass
 - 4.9 Un-archive / restore
-
-### Phase E -- Distribution
-
-- 8.3 PyPI release
-- 8.4 Docker/devcontainer
 
 ---
 
@@ -222,3 +219,21 @@ The Plane backlog items **JOBBRAINMI-1** through **JOBBRAINMI-9** describe the B
 | JOBBRAINMI-1 | Comprehensive tests | Done | `brainjob/tests/` (pytest) |
 
 **Out of scope for this closure:** live URL verification of employer postings, formal JSON Schema (`.json`) files, CI/pre-commit/CHANGELOG/ruff (WBS Phase A), and other Planned WBS items in sections 1–8 above.
+
+---
+
+## 13. Plane backlog -- Phase A + B (proposed)
+
+Next Plane issues after MVP closure. Full implementation plan: [plans/2026-07-20-phase-a-b-hardening-and-tooling.md](./plans/2026-07-20-phase-a-b-hardening-and-tooling.md).
+
+| Plane ID | Phase | WBS | Issue name | Status |
+|----------|-------|-----|------------|--------|
+| JOBBRAINMI-10 | A | 7.8 | CI workflow (pytest + validate + sync --check) | Done |
+| JOBBRAINMI-11 | A | 6.6 | Pre-commit hooks | Done |
+| JOBBRAINMI-12 | A | 7.10 | Ruff lint configuration | Done |
+| JOBBRAINMI-13 | A | 1.6 | CHANGELOG for v0.1.0 | Done |
+| JOBBRAINMI-14 | B | 6.5 | Formal JSON Schema files | Done |
+| JOBBRAINMI-15 | B | 1.5 | JSON schema reference document | Done |
+| JOBBRAINMI-16 | B | 4.8 | `brainjob status` command | Done |
+
+**Delivery order:** 10 → 12 → 11 → 13 → 14 → 15 → 16 (13 and 16 can parallelize once CI exists).

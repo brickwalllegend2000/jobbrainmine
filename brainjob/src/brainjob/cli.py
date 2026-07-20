@@ -4,12 +4,12 @@ from __future__ import annotations
 
 import argparse
 import sys
-from pathlib import Path
 
 from brainjob import __version__
 from brainjob.add import add_job
 from brainjob.archive import archive_job
 from brainjob.paths import resolve_root
+from brainjob.status import format_status, status_workspace
 from brainjob.sync import sync_workspace
 from brainjob.validate import format_report, validate_workspace
 from brainjob.watch import watch_workspace
@@ -56,6 +56,8 @@ def _build_parser() -> argparse.ArgumentParser:
 
     archive_cmd = sub.add_parser("archive", help="Move a job to data/jobs/_archive/")
     archive_cmd.add_argument("job_id")
+
+    sub.add_parser("status", help="Print a concise pipeline summary")
 
     return parser
 
@@ -114,6 +116,14 @@ def main(argv: list[str] | None = None) -> int:
             print(exc, file=sys.stderr)
             return 1
         print(message)
+        return 0
+
+    if args.command == "status":
+        report = validate_workspace(root)
+        if not report.ok:
+            print(format_report(report))
+            return 1
+        print(format_status(status_workspace(root)))
         return 0
 
     parser.error(f"Unknown command: {args.command}")

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brickwalllegend2000/jobbrainmine/brainjob/schemas/job.schema.json",
+  "title": "Brainjob job.json",
+  "description": "Vacancy record. Cross-file job_id consistency and SHA-256 content immutability are enforced by Python (schemas.py), not this schema alone.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "id",
+    "role",
+    "location",
+    "compensation",
+    "dates",
+    "source",
+    "description_original",
+    "classification"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "object",
+      "required": ["title", "company"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "company": { "type": "string", "minLength": 1 },
+        "department": { "type": ["string", "null"] },
+        "employment_type": { "type": ["string", "null"] },
+        "seniority": { "type": ["string", "null"] },
+        "vacancies": { "type": ["integer", "null"] }
+      }
+    },
+    "location": {
+      "type": "object",
+      "required": ["display"],
+      "properties": {
+        "display": { "type": "string", "minLength": 1 },
+        "city": { "type": ["string", "null"] },
+        "country": { "type": ["string", "null"] },
+        "work_arrangement": {
+          "type": ["string", "null"],
+          "enum": ["on-site", "hybrid", "remote", "unknown", null]
+        },
+        "remote_restrictions": { "type": ["string", "null"] },
+        "relocation_available": { "type": ["boolean", "null"] }
+      }
+    },
+    "compensation": {
+      "type": "object"
+    },
+    "dates": {
+      "type": "object",
+      "required": ["captured"],
+      "properties": {
+        "published": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "deadline": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "start_date": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "captured": { "type": "string", "minLength": 1 },
+        "last_verified": { "type": ["string", "null"] }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "url": { "type": "string", "minLength": 1 },
+        "domain": { "type": ["string", "null"] },
+        "reference": { "type": ["string", "null"] },
+        "capture_method": {
+          "type": ["string", "null"],
+          "enum": ["manual", "import", "scrape", null]
+        },
+        "posting_status": {
+          "type": ["string", "null"],
+          "enum": ["open", "closed", "unknown", null]
+        }
+      }
+    },
+    "description_original": {
+      "type": "object",
+      "required": ["content", "sha256"],
+      "properties": {
+        "format": { "type": ["string", "null"] },
+        "content": { "type": "string", "minLength": 1 },
+        "language": { "type": ["string", "null"] },
+        "captured_at": { "type": ["string", "null"] },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "priority": {
+          "type": ["string", "null"],
+          "enum": ["low", "medium", "high", null]
+        }
+      }
+    }
+  }
+}

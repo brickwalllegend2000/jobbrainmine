@@ -1,6 +1,10 @@
 """Tests for Brainjob integrity checks."""
 
-from brainjob.integrity import compute_sha256, stamp_description_original, verify_description_original
+from brainjob.integrity import (
+    compute_sha256,
+    stamp_description_original,
+    verify_description_original,
+)
 
 
 def test_compute_sha256_is_deterministic():
