@@ -13,7 +13,7 @@ brainjob sync
 
 | Access | Link |
 |--------|------|
-| Live (GitHub Pages) | [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) |
+| Live (GitHub Pages) | [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/) (after a successful Pages deploy) |
 | Local | [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard.html) |
 
 Serve the dashboard locally after syncing:
@@ -28,13 +28,13 @@ Then open [http://localhost:8000/dashboard.html](http://localhost:8000/dashboard
 
 ## CI and live dashboard
 
-On pushes to `main` that change job data or sync code, GitHub Actions:
+On pushes to `main` that change job data or sync code (or via **Actions → Sync tracking and publish Pages → Run workflow**):
 
 1. Runs `brainjob validate` and `brainjob sync`
 2. Commits updated `brainjob/tracking/` artifacts back to the repo
-3. Publishes the dashboard to GitHub Pages
+3. Publishes `tracking/dashboard.html` as the site root (`index.html`) to GitHub Pages
 
-After enabling Pages (Settings → Pages → Source: GitHub Actions), view it at:
+Pages source must be **GitHub Actions** (Settings → Pages). Live URL:
 
 [https://brickwalllegend2000.github.io/jobbrainmine/](https://brickwalllegend2000.github.io/jobbrainmine/)
 
