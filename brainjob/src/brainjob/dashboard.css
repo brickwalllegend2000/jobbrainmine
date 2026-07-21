@@ -124,7 +124,17 @@ body {
   cursor: pointer;
 }
 
-.job-card:hover {
+.job-card.archived {
+  opacity: 0.55;
+  border-style: dashed;
+}
+
+.job-card.archived h3 {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+
   border-color: var(--accent);
 }
 

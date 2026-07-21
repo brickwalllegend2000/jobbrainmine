@@ -52,6 +52,6 @@
       "migration",
       "assistant"
     ],
-    "priority": "medium"
+    "priority": "high"
   }
 }

@@ -188,6 +188,18 @@ def render_dashboard(index_data: dict[str, Any]) -> str:
             <option value="low">Low</option>
           </select>
         </label>
+        <label>
+          Sort
+          <select id="sort-by">
+            <option value="priority-deadline">Priority + Deadline</option>
+            <option value="deadline">Deadline</option>
+            <option value="status">Status</option>
+            <option value="company">Company</option>
+          </select>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="filter-archived" checked> Hide archived
+        </label>
         <label class="checkbox">
           <input type="checkbox" id="filter-overdue"> Overdue actions only
         </label>

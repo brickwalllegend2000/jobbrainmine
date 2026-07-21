@@ -1,13 +1,13 @@
 {
   "job_id": "icmpd-team-assistant",
-  "status": "saved",
+  "status": "preparing",
   "saved_date": "2026-07-21",
   "applied_date": null,
   "withdrawn_date": null,
   "decision_date": null,
   "next_action": {
-    "description": "Decide EU-MIDCAP vs RRF assignment fit; confirm admin/coordination experience before drafting application",
-    "due": "2026-07-20",
+    "description": "URGENT: Deadline 2026-07-27 — decide EU-MIDCAP vs RRF assignment fit; confirm admin/coordination experience; draft and submit application",
+    "due": "2026-07-25",
     "completed": false
   },
   "timeline": [
