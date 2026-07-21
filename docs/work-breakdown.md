@@ -169,7 +169,7 @@ Phases group the **Planned** items above into logical delivery order.
 
 Blueprint: [plans/2026-07-21-profile-source-library.md](./plans/2026-07-21-profile-source-library.md)
 
-- PROFILE-E1 / 14.1–14.7 Phase 1 scaffold -- Planned (14.6 planning registration Partial/Done; scaffold not started)
+- PROFILE-E1 / 14.1–14.7 Phase 1 scaffold -- Done (`profile/` tree, templates, ignore rules)
 - External file intake -- Planned (after Phase 1 DoD; blocked on materials)
 - PROFILE-E2 / Phase 2 Brainjob wiring (WBS 2.8) -- Planned, deferred
 
@@ -262,13 +262,13 @@ Plane tracks implementation; the repository is canonical for folders, inventory,
 
 | ID | Plane | Work package | Status | Notes |
 |----|-------|--------------|--------|-------|
-| 14.1 | PROFILE-1 | Create repository folder scaffold | Planned | `_inbox`, categories, `derived/{cv,portfolio,excerpts}` + placeholders |
-| 14.2 | PROFILE-2 | Write `profile/README.md` conventions | Planned | Categories, naming, git policy, intake, deferred Brainjob note |
-| 14.3 | PROFILE-3 | Create `INVENTORY.md` template | Planned | Columns: original name, proposed path, category, relevance, format status, notes |
-| 14.4 | PROFILE-4 | Create `MAPPING.md` template | Planned | Profile / feedstock / skip; no job IDs |
-| 14.5 | PROFILE-5 | Add repository ignore rules | Planned | Ignore `_inbox/*` (keep placeholder) and `**/raw/` |
-| 14.6 | PROFILE-6 | Update work-breakdown documentation | Partial | Blueprint + this section registered; refresh statuses when scaffold lands; WBS 2.8 stays Planned |
-| 14.7 | PROFILE-7 | Phase 1 closure review | Planned | DoD check before first intake batch |
+| 14.1 | PROFILE-1 | Create repository folder scaffold | Done | `_inbox`, categories, `derived/{cv,portfolio,excerpts}` + `.gitkeep` placeholders |
+| 14.2 | PROFILE-2 | Write `profile/README.md` conventions | Done | Categories, naming, git policy, intake, deferred Brainjob note |
+| 14.3 | PROFILE-3 | Create `INVENTORY.md` template | Done | Columns: original name, proposed path, category, relevance, format status, notes |
+| 14.4 | PROFILE-4 | Create `MAPPING.md` template | Done | Profile / feedstock / skip; no job IDs |
+| 14.5 | PROFILE-5 | Add repository ignore rules | Done | Root `.gitignore`: ignore `_inbox/*` (keep placeholder) and `**/raw/` |
+| 14.6 | PROFILE-6 | Update work-breakdown documentation | Done | Statuses refreshed for Phase 1; Brainjob WBS 2.8 stays Planned |
+| 14.7 | PROFILE-7 | Phase 1 closure review | Done | DoD met; ready for first intake batch when materials arrive |
 
 ### After Phase 1
 
@@ -277,4 +277,4 @@ Plane tracks implementation; the repository is canonical for folders, inventory,
 | 14.8 | — | External file intake and classification | Planned | Blocked until materials land in `_inbox/` |
 | 14.9 | PROFILE-E2 | Wire `derived/` into Brainjob (WBS 2.8) | Planned | Deferred Epic; start only after usable distilled CV/portfolio artifacts |
 
-**Current status:** Plane blueprint saved in-repo. Phase 1 scaffold (14.1–14.5, 14.7) not started. Materials remain external. Brainjob **2.8** remains Planned.
+**Current status:** Phase 1 scaffold Done (`profile/` tree, README, inventory/mapping templates, ignore rules). Materials remain external (14.8 blocked on intake). Brainjob **2.8** remains Planned. Plane Epics/Tasks still create via blueprint section 11.

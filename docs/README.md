@@ -9,7 +9,7 @@ Documentation for the [jobbrainmine](https://github.com/brickwalllegend2000/jobb
 | [JSON schema reference](./json-schema-reference.md) | Human guide to schema_version 1 and formal `.schema.json` contracts |
 | [Skill to job workflow](./skill-to-job-workflow.md) | Format extracted postings and create jobs with skills + `brainjob add` (includes GEF worked example) |
 | [Phase A+B plan](./plans/2026-07-20-phase-a-b-hardening-and-tooling.md) | Implementation plan and Plane IDs JOBBRAINMI-10..16 |
-| [Profile source library plan](./plans/2026-07-21-profile-source-library.md) | Plane blueprint + Phase 1/2 delivery breakdown for standalone `profile/` (scaffold Planned) |
+| [Profile source library plan](./plans/2026-07-21-profile-source-library.md) | Plane blueprint + Phase 1/2 delivery breakdown for standalone `profile/` (Phase 1 scaffold Done; ready for intake) |
 | [CHANGELOG](../brainjob/CHANGELOG.md) | Brainjob version history |
 
 Active sample jobs: `example-company-policy-officer` (synthetic) and `green-european-foundation-policy-consultant-on-green-transition` (real capture). Live dashboard: [GitHub Pages](https://brickwalllegend2000.github.io/jobbrainmine/).

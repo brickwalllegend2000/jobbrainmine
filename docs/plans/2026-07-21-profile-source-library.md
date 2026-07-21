@@ -1,6 +1,6 @@
 # Profile Library — Plane Blueprint & Delivery Breakdown
 
-> **Status:** Blueprint registered in-repo; Phase 1 scaffold not implemented; Plane Epics/Tasks not yet created in Plane (no Plane API in this environment — use section 11 as the create checklist).  
+> **Status:** Phase 1 scaffold implemented in-repo (`profile/` tree, templates, ignore rules); Plane Epics/Tasks not yet created in Plane (no Plane API in this environment — use section 11 as the create checklist).  
 > **Canonical rule:** Plane tracks decisions and implementation work; the repository remains the source of truth for folder structure, file inventory, and source-to-profile mapping.
 
 **Purpose:** Operating blueprint for the standalone `profile/` academic and profile-source library.
@@ -74,7 +74,7 @@ Do not create a label for every folder. Folder-level detail belongs in the repos
 
 **Delivery order:** PROFILE-1 → 2 → 3 → 4 → 5 (3 and 4 can parallelize after 2) → confirm 6 → 7.
 
-**Repo status for PROFILE-6:** Partially Done (plan + WBS §14 exist); refresh when scaffold lands so statuses match reality.
+**Repo status for PROFILE-6:** Done (plan + WBS §14 refreshed to match scaffold).
 
 ### Epic: Phase 2 — Brainjob Derived-Artifact Wiring (Deferred)
 
@@ -179,7 +179,7 @@ Examples: `syllabus_eu_governance_overview_2024.pdf`; `paper_climate_policy_adap
 ## 10. Next actions
 
 1. **In Plane (manual):** Create Project “Profile Library”, Epic `PROFILE-E1` with tasks `PROFILE-1`…`PROFILE-7`, Epic `PROFILE-E2` in Backlog with `deferred` + `phase-2`, apply labels from section 3, optionally attach a Plane Page that links to this file.
-2. **In repo:** Implement Phase 1 scaffold (PROFILE-1…7 / WBS 14.1–14.7) when ready to execute.
+2. **In repo:** Phase 1 scaffold (PROFILE-1…7 / WBS 14.1–14.7) is implemented; next repo step is external intake (14.8) when materials land in `_inbox/`.
 3. Do **not** start Phase 2 until `profile/derived/` holds usable distilled artifacts.
 
 ---
