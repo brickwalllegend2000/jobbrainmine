@@ -10,8 +10,10 @@
   const filterStatus = document.getElementById("filter-status");
   const filterPriority = document.getElementById("filter-priority");
   const filterOverdue = document.getElementById("filter-overdue");
+  const filterArchived = document.getElementById("filter-archived");
   const filterIntegrity = document.getElementById("filter-integrity");
   const filterSearch = document.getElementById("filter-search");
+  const sortBy = document.getElementById("sort-by");
   const detailClose = document.getElementById("detail-close");
 
   generatedAt.textContent = data.generated_at || "unknown";
@@ -53,9 +55,11 @@
     const status = filterStatus.value;
     const priority = filterPriority.value;
     const overdueOnly = filterOverdue.checked;
+    const hideArchived = filterArchived.checked;
     const integrityOnly = filterIntegrity.checked;
     const query = filterSearch.value.trim().toLowerCase();
 
+    if (hideArchived && job.application.status === "archived") return false;
     if (status && job.application.status !== status) return false;
     if (priority && job.classification.priority !== priority) return false;
     if (overdueOnly && !job.application.overdue_action) return false;
@@ -76,18 +80,49 @@
     return true;
   }
 
+  const PRIORITY_ORDER = { high: 0, medium: 1, low: 2 };
+
+  function sortJobs(list) {
+    const key = sortBy.value;
+    return [...list].sort((a, b) => {
+      if (key === "priority-deadline") {
+        const pa = PRIORITY_ORDER[a.classification.priority] ?? 1;
+        const pb = PRIORITY_ORDER[b.classification.priority] ?? 1;
+        if (pa !== pb) return pa - pb;
+        const da = a.dates.deadline || "9999";
+        const db = b.dates.deadline || "9999";
+        return da < db ? -1 : da > db ? 1 : 0;
+      }
+      if (key === "deadline") {
+        const da = a.dates.deadline || "9999";
+        const db = b.dates.deadline || "9999";
+        return da < db ? -1 : da > db ? 1 : 0;
+      }
+      if (key === "status") {
+        return (a.application.status || "").localeCompare(b.application.status || "");
+      }
+      if (key === "company") {
+        return (a.role.company || "").localeCompare(b.role.company || "");
+      }
+      return 0;
+    });
+  }
+
   function renderJobCard(job) {
     const priority = job.classification.priority || "medium";
     const overdue = job.application.overdue_action;
+    const isArchived = job.application.status === "archived";
     const integrityClass = job.integrity.valid ? "integrity-ok" : "integrity-bad";
     const integrityLabel = job.integrity.valid ? "integrity ok" : "integrity issue";
     const next = job.application.next_action;
     const nextText = next && !next.completed
       ? `Next: ${next.description}${next.due ? " (due " + next.due + ")" : ""}`
-      : "No pending next action";
+      : isArchived
+        ? `Outcome: ${escapeHtml(job.application.outcome || "archived")}`
+        : "No pending next action";
 
     return `
-      <article class="job-card" data-job-id="${job.id}">
+      <article class="job-card${isArchived ? " archived" : ""}" data-job-id="${job.id}">
         <h3>${escapeHtml(job.role.title)} @ ${escapeHtml(job.role.company)}</h3>
         <div class="job-meta">
           <span class="badge status">${escapeHtml(job.application.status || "unknown")}</span>
@@ -102,7 +137,7 @@
   }
 
   function renderJobs() {
-    const filtered = jobs.filter(matchesFilters);
+    const filtered = sortJobs(jobs.filter(matchesFilters));
     if (!filtered.length) {
       jobsPanel.innerHTML = "<p>No jobs match the current filters.</p>";
       return;
@@ -157,7 +192,7 @@
       <div class="detail-grid">
         <section class="detail-section">
           <h4>${escapeHtml(job.role.title)} @ ${escapeHtml(job.role.company)}</h4>
-          <p>Status: ${escapeHtml(job.application.status)} | Saved: ${escapeHtml(job.application.saved_date || "n/a")} | Applied: ${escapeHtml(job.application.applied_date || "n/a")}</p>
+          <p>Status: ${escapeHtml(job.application.status)}${job.application.outcome ? " | Outcome: " + escapeHtml(job.application.outcome) : ""} | Saved: ${escapeHtml(job.application.saved_date || "n/a")} | Applied: ${escapeHtml(job.application.applied_date || "n/a")}</p>
           <p>Location: ${escapeHtml(job.location.display || "n/a")} (${escapeHtml(job.location.work_arrangement || "unknown")})</p>
           <p>Compensation: ${formatCompensation(job.compensation)}</p>
           <p>Source: <a href="${escapeAttr(job.source.url)}" target="_blank" rel="noopener">${escapeHtml(job.source.url || "")}</a></p>
@@ -227,7 +262,7 @@
     return escapeHtml(value).replaceAll("'", "&#39;");
   }
 
-  [filterStatus, filterPriority, filterOverdue, filterIntegrity, filterSearch].forEach((el) => {
+  [filterStatus, filterPriority, filterOverdue, filterArchived, filterIntegrity, filterSearch, sortBy].forEach((el) => {
     el.addEventListener("input", renderJobs);
     el.addEventListener("change", renderJobs);
   });

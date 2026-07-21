@@ -53,6 +53,6 @@
       "energy",
       "mobility"
     ],
-    "priority": "medium"
+    "priority": "high"
   }
 }
