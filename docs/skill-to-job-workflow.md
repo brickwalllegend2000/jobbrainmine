@@ -66,6 +66,19 @@ Both skills ship Claude and ChatGPT adapters:
 - Formatter: `skills/extracted-output-formatter/adapters/{claude,chatgpt}/PROMPT.md`
 - Add-job: `skills/brainjob-add-job/adapters/{claude,chatgpt}/PROMPT.md`
 
+## Worked example
+
+[`brainjob/data/jobs/green-european-foundation-policy-consultant-on-green-transition/`](../brainjob/data/jobs/green-european-foundation-policy-consultant-on-green-transition/) was captured from call-for-policy-consultant PDF text using this workflow:
+
+| Step | Result |
+|------|--------|
+| Required CLI fields | Title, company, full description, org URL `https://gef.eu/` (no public apply URL in source) |
+| Optional CLI fields | Brussels location, deadline `2026-07-14`, tags `climate energy policy consultancy` |
+| Hand-edits after add | `employment_type` consultancy, compensation max €35k, PDF as `source.reference`, contact Jamie Kendrick, status `saved`, AI note in `notes.json` |
+| Publish | `brainjob validate` → `brainjob sync` → GitHub Pages dashboard |
+
+When the source has no HTTP apply link, prefer the organisation site for `--url` and record the PDF or filename in `source.reference` and/or `documents.json`.
+
 ## Immutability reminders
 
 1. `description_original.content` is employer content: stamp once at add, verify with SHA-256, never rewrite via tooling.

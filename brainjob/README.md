@@ -58,7 +58,9 @@ brainjob add \
   --tags policy eu-affairs
 ```
 
-`brainjob add` stamps `description_original.sha256` at capture time. After that, tooling verifies but never rewrites the original description text.
+`brainjob add` stamps `description_original.sha256` at capture time. After that, tooling verifies but never rewrites the original description text. Multiline and special-character descriptions are supported (values are JSON-escaped during template render).
+
+Agent-assisted capture (clean extract → map fields → add): see [`docs/skill-to-job-workflow.md`](../docs/skill-to-job-workflow.md).
 
 ### `brainjob validate`
 
@@ -156,8 +158,8 @@ Data is embedded at sync time from authoritative JSON under `data/jobs/`.
 
 | Directory | Notes |
 |-----------|-------|
-| `data/jobs/example-company-policy-officer/` | Synthetic sample |
-| `data/jobs/green-european-foundation-policy-consultant-on-green-transition/` | GEF consultancy |
+| `data/jobs/example-company-policy-officer/` | Synthetic sample matching the project specification |
+| `data/jobs/green-european-foundation-policy-consultant-on-green-transition/` | Real capture from call PDF text (skill-to-job workflow) |
 | `data/jobs/beuc-food-policy-trainee-6-months-traineeship/` | BEUC internship (reference) |
 | `data/jobs/icmpd-team-assistant/` | ICMPD Team Assistant (EU-MIDCAP / RRF) |
 | `data/jobs/polis-network-communications-intern/` | POLIS communications internship |

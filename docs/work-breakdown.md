@@ -16,6 +16,8 @@ Legend: **Done** = implemented in v0.1.0 | **Partial** = exists but limited | **
 | 1.4 | CONTRIBUTING / development guide | Planned | Coding standards, PR flow |
 | 1.5 | JSON schema reference (formal spec document) | Done | `docs/json-schema-reference.md` |
 | 1.6 | CHANGELOG | Done | `brainjob/CHANGELOG.md` |
+| 1.7 | Skill-to-job workflow guide | Done | `docs/skill-to-job-workflow.md` |
+| 1.8 | Cross-tool agent skills | Done | `skills/` + `.github/skills/` (formatter + add-job; Copilot/Cursor/Claude/ChatGPT adapters) |
 
 ---
 
@@ -25,10 +27,10 @@ Legend: **Done** = implemented in v0.1.0 | **Partial** = exists but limited | **
 |----|--------------|--------|-------|
 | 2.1 | Job directory layout (`data/jobs/<id>/`) | Done | Five required JSON files per job |
 | 2.2 | Job templates for `brainjob add` | Done | `data/templates/job/` |
-| 2.3 | Example job bundle | Done | `example-company-policy-officer` |
+| 2.3 | Example / sample job bundles | Done | `example-company-policy-officer`; GEF Policy Consultant capture |
 | 2.4 | Archive storage (`data/jobs/_archive/`) | Done | Excluded from active index |
 | 2.5 | Schema versioning (`schema_version: 1`) | Done | In `job.json` and index |
-| 2.6 | Import from external sources (scrape/API) | Planned | `capture_method: scrape` exists in schema but no importer |
+| 2.6 | Import from external sources (scrape/API) | Planned | Skill-assisted paste/capture exists; no URL scraper/`brainjob import` yet |
 | 2.7 | Bulk export (CSV, PDF report) | Planned | |
 | 2.8 | Attachment/binary storage convention | Planned | Documents reference paths only today |
 
@@ -43,7 +45,7 @@ Legend: **Done** = implemented in v0.1.0 | **Partial** = exists but limited | **
 | 3.3 | SHA-256 integrity | `integrity.py` | Done | Stamp and verify `description_original` |
 | 3.4 | Schema validation | `schemas.py` | Done | Per-file and per-directory validation |
 | 3.5 | Workspace validation report | `validate.py` | Done | Aggregate errors across jobs |
-| 3.6 | Job creation from templates | `add.py` | Done | CLI-driven scaffolding |
+| 3.6 | Job creation from templates | `add.py` | Done | CLI-driven scaffolding; JSON-escapes multiline descriptions |
 | 3.7 | Index and dashboard generation | `sync.py` | Done | Stats, filters data, HTML render |
 | 3.8 | File watcher | `watch.py` | Done | mtime polling, auto-sync |
 | 3.9 | Archive workflow | `archive.py` | Done | Status update + directory move |
@@ -105,7 +107,7 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 | ID | Work package | Status | Test file |
 |----|--------------|--------|-----------|
 | 7.1 | Integrity unit tests | Done | `test_integrity.py` (4 tests) |
-| 7.2 | Add job integration test | Done | `test_add.py` |
+| 7.2 | Add job integration test | Done | `test_add.py` (includes multiline description) |
 | 7.3 | Validation tests (happy + tampered) | Done | `test_validate.py` |
 | 7.4 | Sync and staleness check tests | Done | `test_sync.py` |
 | 7.5 | Archive workflow test | Done | `test_archive.py` |
@@ -115,7 +117,7 @@ Global flags: `--root`, `BRAINJOB_ROOT`, `--version`.
 | 7.9 | Coverage reporting | Planned | |
 | 7.10 | Lint/typecheck (ruff, mypy) | Done | ruff `E`/`F`/`I` in CI; mypy still Planned |
 
-**Current test count:** 17 tests across 7 files.
+**Current test count:** 18 tests across 7 files.
 
 ---
 
@@ -152,7 +154,7 @@ Phases group the **Planned** items above into logical delivery order.
 
 ### Phase C -- Import and export
 
-- 2.6 Job posting importer (URL or file)
+- 2.6 Job posting importer (URL or file) -- skill-assisted paste capture Done (1.7/1.8); automated importer still Planned
 - 2.7 Export to CSV/PDF
 - 2.8 Document attachment conventions
 
