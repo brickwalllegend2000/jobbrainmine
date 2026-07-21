@@ -1,0 +1,4 @@
+# Profile Library — unreviewed intake and raw dumps
+profile/_inbox/*
+!profile/_inbox/.gitkeep
+profile/**/raw/
