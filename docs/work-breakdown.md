@@ -32,7 +32,7 @@ Legend: **Done** = implemented in v0.1.0 | **Partial** = exists but limited | **
 | 2.5 | Schema versioning (`schema_version: 1`) | Done | In `job.json` and index |
 | 2.6 | Import from external sources (scrape/API) | Planned | Skill-assisted paste/capture exists; no URL scraper/`brainjob import` yet |
 | 2.7 | Bulk export (CSV, PDF report) | Planned | |
-| 2.8 | Attachment/binary storage convention | Planned | Documents reference paths only today |
+| 2.8 | Attachment/binary storage convention | Planned | Documents reference paths only today; separate from profile library (section 14) |
 
 ---
 
@@ -156,7 +156,7 @@ Phases group the **Planned** items above into logical delivery order.
 
 - 2.6 Job posting importer (URL or file) -- skill-assisted paste capture Done (1.7/1.8); automated importer still Planned
 - 2.7 Export to CSV/PDF
-- 2.8 Document attachment conventions
+- 2.8 Document attachment conventions (Brainjob); do after profile `derived/` artifacts exist (section 14 Phase 2)
 
 ### Phase D -- UX improvements
 
@@ -164,6 +164,14 @@ Phases group the **Planned** items above into logical delivery order.
 - 5.7 Dashboard dev workflow
 - 5.8 Accessibility pass
 - 4.9 Un-archive / restore
+
+### Phase E -- Profile source library (standalone)
+
+Plan: [plans/2026-07-21-profile-source-library.md](./plans/2026-07-21-profile-source-library.md)
+
+- 14.1–14.5 Phase 1 scaffold (folder tree, conventions, inventory/mapping, gitignore, doc pointers) -- Planned
+- 14.6 External file intake and classification -- Planned (blocked on materials)
+- 14.7 Wire `derived/` into Brainjob documents (WBS 2.8) -- Planned (Phase 2)
 
 ---
 
@@ -239,3 +247,21 @@ Next Plane issues after MVP closure. Full implementation plan: [plans/2026-07-20
 | JOBBRAINMI-16 | B | 4.8 | `brainjob status` command | Done |
 
 **Delivery order:** 10 → 12 → 11 → 13 → 14 → 15 → 16 (13 and 16 can parallelize once CI exists).
+
+---
+
+## 14. Profile source library (standalone)
+
+Standalone academic/profile feedstock library at repo-root `profile/`. **Not wired to Brainjob** in Phase 1. Full plan: [plans/2026-07-21-profile-source-library.md](./plans/2026-07-21-profile-source-library.md).
+
+| ID | Work package | Status | Notes |
+|----|--------------|--------|-------|
+| 14.1 | `profile/` folder tree (`_inbox`, categories, `derived/`) | Planned | Scaffold only; no source binaries yet |
+| 14.2 | Naming conventions + `profile/README.md` | Planned | Intake checklist; deferred Brainjob note |
+| 14.3 | `INVENTORY.md` + `MAPPING.md` templates | Planned | Empty until external intake |
+| 14.4 | `.gitignore` for `_inbox/` and `**/raw/` | Planned | Keep `.gitkeep` |
+| 14.5 | Planning docs pointer (this section + docs index) | Done | Plan saved 2026-07-21 |
+| 14.6 | External file intake and classification | Planned | Blocked until materials are dropped into `_inbox/` |
+| 14.7 | Wire `derived/` CV/portfolio into Brainjob (WBS 2.8) | Planned | Phase 2; after distilled artifacts exist |
+
+**Current status:** Plan and WBS registered. Phase 1 scaffold (14.1–14.4) not started. Materials remain external.
