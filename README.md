@@ -46,6 +46,7 @@ Pull requests run pytest, validation, and `brainjob sync --check`.
 | [Work breakdown](docs/work-breakdown.md) | WBS and Plane backlog status |
 | [JSON schema reference](docs/json-schema-reference.md) | Data model and formal schemas |
 | [Skill to job workflow](docs/skill-to-job-workflow.md) | Format extracted postings and add jobs |
+| [Profile source library plan](docs/plans/2026-07-21-profile-source-library.md) | Plane blueprint for standalone `profile/` library (scaffold Planned) |
 | [CHANGELOG](brainjob/CHANGELOG.md) | Version history |
 
 ## Skills
